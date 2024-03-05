@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sign up</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/image/smartcard.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<script src="/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/font/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/signup.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+	<div>
+		<div>
+			<div class="logo">
+				<img src="" alt="" id="logo">
+			</div>
+			<div>
+				<form class="validate-form" action="/<%= datauser[0].cardid %>/processsignup"
+					method="post">
+
+					<!-- label -->
+					<span lang="en">
+						Hi! I'm SmartCard<br>
+						Join me now...
+					</span>
+					<span lang="vi">
+						Xin chào bạn đến với SmartCard
+					</span>
+
+					<!-- card id -->
+					<div>
+						<span lang="en">Card ID</span>
+						<span lang="vi">ID Thẻ</span>
+						<input class="inputcontent" type="text" name="cardid" placeholder="<%= datauser[0].cardid %>"
+							disabled>
+					</div>
+
+					<!-- username -->
+					<div class="validate-input" data-validate="Username is required" lang="en">
+						<span lang="en">Username</span>
+						<input class="inputcontent" type="text" name="username" placeholder="Type your username" lang="en">
+					</div>
+					<div class="validate-input" data-validate="Tên đăng nhập bắt buộc điền" lang="vi">
+						<span lang="vi">Tên đăng nhập</span>
+						<input class="inputcontent" type="text" name="username" placeholder="Nhập tên đăng nhập" lang="vi">
+					</div>
+
+					<!-- password -->
+					<div class="validate-input" data-validate="Password is required" lang="en">
+						<div>
+							<span lang="en">Password</span>
+							<span class="showhidepassword" onclick="showpassword(0)" lang="en">Show password</span>
+						</div>
+						<input class="inputcontent password" type="password" name="password" placeholder="Type your password" lang="en">
+					</div>
+					<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
+						<div>
+							<span lang="vi">Mật khẩu</span>
+							<span class="showhidepassword" onclick="showpassword(1)" lang="vi">Hiện mật khẩu</span>
+						</div>
+						<input class="inputcontent password" type="password" name="password" placeholder="Nhập mật khẩu" lang="vi">
+					</div>
+
+					<!-- name -->
+					<div class="validate-input" data-validate="Name is required" lang="en">
+						<span lang="en">Name</span>
+						<input class="inputcontent" type="text" name="name" placeholder="Type your name" id="name" lang="en">
+					</div>
+					<div class="validate-input" data-validate="Tên bắt buộc điền" lang="vi">
+						<span lang="vi">Tên của bạn</span>
+						<input class="inputcontent" type="text" name="name" placeholder="Nhập tên" id="name" lang="vi">
+					</div>
+
+					<!-- Already have an account? -->
+					<div>
+						<a href="/signin">
+							<i lang="en">Already have an account?</i>
+							<i lang="vi">Đã có tài khoản?</i>
+						</a>
+					</div>
+
+					<!-- submit -->
+					<div>
+						<div>
+							<button lang="en">
+								Sign up
+							</button>
+							<button lang="vi">
+								Đăng ký
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/jquery-3.6.4.js"></script>
+	<script src="/js/signup.js"></script>
+	<script src="/js/showhidepassword.js"></script>
+	<script src="/js/language.js"></script>
+</body>
+
+</html>

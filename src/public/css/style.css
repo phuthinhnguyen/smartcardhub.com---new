@@ -1,0 +1,60 @@
+@keyframes messagesshow {
+  0% {
+    opacity: 0;
+    right: -100px;
+  }
+  100% {
+    opacity: 1;
+    right: 50px;
+  }
+}
+[lang=en] [lang=vi],
+[lang=vi] [lang=en] {
+  display: none !important;
+}
+
+@font-face {
+  font-family: "Afacad";
+  src: url(../font/Afacad-VariableFont_wght.ttf);
+}
+html ::-webkit-scrollbar {
+  width: 8px;
+}
+html ::-webkit-scrollbar-track {
+  background: lightgray;
+}
+html ::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+#scrolltop img {
+  width: 48px;
+  height: 48px;
+}
+#scrolltop:hover {
+  cursor: pointer;
+}
+
+@keyframes navsticky {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.scrolltop-show {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  animation: navsticky 0.8s;
+  transition: transform 0.4s;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SMARTCARD</title>
+	<link rel="icon" type="image/png" href="/image/smartcard.ico" />
+	<link rel="stylesheet" href="/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<script src="/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="/js/jquery-3.6.4.js"></script>
+	<script src="/js/language.js"></script>
+	<link rel="stylesheet" href="/font/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+	<!-- main -->
+	<div class="wrapper" id="wrapper">
+		<nav>
+			<div class="nav-wrap">
+				<div class="left">
+					<ul>
+						<li>
+							<a lang="en" id="home-en">Home</a>
+							<a lang="vi" id="home-vi">Trang chủ</a>
+						</li>
+		
+						<li>
+							<a lang="en" id="about-en">About</a>
+							<a lang="vi" id="about-vi">Về SMARTCARD</a>
+						</li>
+		
+						<li>
+							<a lang="en" id="products-en">Products</a>
+							<a lang="vi" id="products-vi">Sản phẩm</a>
+						</li>
+						<li>
+							<a lang="en" id="userguides-en">User guides</a>
+							<a lang="vi" id="userguides-vi">Hướng dẫn</a>
+						</li>
+						<li>
+							<a lang="en" id="reviews-en">Reviews</a>
+							<a lang="vi" id="reviews-vi">Đánh giá</a>
+						</li>
+						<li>
+							<a lang="en" id="contact-en">Contact</a>
+							<a lang="vi" id="contact-vi">Liên hệ</a>
+						</li>
+					</ul>
+				</div>
+			
+				<div class="right">
+				   <a lang="en" href="/signin">Log in</a>
+				   <a lang="vi" href="/signin">Đăng nhập</a>
+				   <img src="/image/index/vi.svg" alt="" style="width: 25px;height: 25px;margin-left: 20px;" onclick="vi()">
+				   <img src="/image/index/us.svg" alt="" onclick="eng()">
+				</div>
+			</div>
+		</nav>
+		<script>
+			$("#home-en, #home-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".home").offset().top
+				}, 600);
+			})
+			$("#about-en").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".about-en").offset().top
+				}, 600);
+			})
+			$("#about-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".about-vi").offset().top
+				}, 600);
+			})
+			$("#products-en").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".products-en").offset().top
+				}, 600);
+			})
+			$("#products-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".products-vi").offset().top
+				}, 600);
+			})
+			$("#userguides-en").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".userguides-en").offset().top
+				}, 600);
+			})
+			$("#userguides-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".userguides-vi").offset().top
+				}, 600);
+			})
+			$("#reviews-en").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".reviews-en").offset().top
+				}, 600);
+			})
+			$("#reviews-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".reviews-vi").offset().top
+				}, 600);
+			})
+			$("#contact-en").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".contact-en").offset().top
+				}, 600);
+			})
+			$("#contact-vi").click(function name(params) {
+				$('html').animate({
+					scrollTop: $(".contact-vi").offset().top
+				}, 600);
+			})
+		</script>
+
+		<!-- scrolltop -->
+		<div id="scrolltop">
+			<img src="/image/index/totop.png" alt="">
+		</div>
+
+		<!-- toast -->
+		<div aria-live="polite" aria-atomic="true"
+			class="d-flex justify-content-center align-items-center toast-container-res"
+			style="position: absolute; bottom: 20px;right: 50px;">
+			<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000">
+				<div class="toast-header d-flex justify-content-between"
+					style="background-color: dodgerblue;">
+					<div>
+						<img src="/image/smartcard.ico" class="rounded mr-2" alt="..."
+							style="width:20px;height: 20px;margin-right: 5px;">
+						<strong class="mr-auto" style="color: white;">SMARTCARD</strong>
+					</div>
+					<button type="button" class="btn-close ml-2 mb-1" data-bs-dismiss="toast"></button>
+				</div>
+				<div lang="en" class="toast-body" style="color: black;">Your e-mail has been sent.</div>
+				<div lang="vi" class="toast-body" style="color: black;">Gửi thư thành công.</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- #scroll to top -->
+	<script>
+		$("#scrolltop").click(function name(params) {
+			$("html").animate({ scrollTop: 0 });
+		})
+		window.onscroll = function () { scrolltop() };
+		function scrolltop() {
+			if ((document.body.scrollTop > 100) || (document.documentElement.scrollTop > 100)) {
+				$("#scrolltop").addClass("scrolltop-show");
+
+			}
+			else {
+				$("#scrolltop").removeClass("scrolltop-show");
+		
+			};
+		}
+	</script>
+
+</body>
+
+</html>

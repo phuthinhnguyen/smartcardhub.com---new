@@ -1,0 +1,52 @@
+@import "_font";
+@import "_variable";
+@import "_mixin";
+
+
+// change language from lang attribute
+[lang=en] [lang=vi],
+[lang=vi] [lang=en] {
+    display: none !important;
+}
+
+@font-face {
+    font-family: "Afacad";
+    src: url(../font/Afacad-VariableFont_wght.ttf);
+}
+
+html {
+    @include scrollbar(8px, lightgray, black, black);
+}
+
+// CSS scrolltop
+#scrolltop {
+    img {
+        width: 48px;
+        height: 48px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+@keyframes navsticky {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.scrolltop-show {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    animation: navsticky 0.8s;
+    transition: transform 0.4s;
+}
+

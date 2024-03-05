@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sign in</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/image/smartcard.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<script src="/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/font/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+	<!-- toast -->
+	<% if (messages!="") { %>
+		<div class="messages-show">
+			<div class="messages-show-header">
+				<div>
+					<img src="/image/smartcard.ico"
+						style="width:20px;height: 20px;margin-right: 5px;">
+					<strong class="mr-auto" style="color: black;font-weight: 700;">SMARTCARD</strong>
+				</div>
+				<button type="button" class="btn-close ml-2 mb-1" data-bs-dismiss="toast" onclick="closepopup()"></button>
+			</div>
+			<div class="messages-show-body">
+				<p lang="en"><%= messages[0] %></p>
+				<p lang="vi"><%= messages[1] %></p>
+			</div>
+		</div>
+	
+		<% } else{ %> 	
+		<div class="messages-hide"></div>
+	<% } %>
+	<script>
+		function closepopup(){
+			document.getElementsByClassName("messages-show")[0].classList.add('messages-hide');
+		}
+	</script>
+
+	<!-- content -->
+	<div class="content">
+		<div class="left">
+			<div class="left-container">
+				<div class="logo">
+					<img src="/image/index/logo.png" alt="" id="logo">
+				</div>
+				<div class="form">
+					<form class="validate-form" action="/processLogin" method="post">
+	
+						<!-- username -->
+						<div class="validate-input" data-validate="Username is required" lang="en">
+							<span lang="en">Username</span>
+							<input class="inputcontent" type="text" name="username" placeholder="Type your username" lang="en">
+							<!-- <span data-symbol="&#xf206;" lang="en"></span> -->
+						</div>
+						<div class="validate-input" data-validate="Tên đăng nhập bắt buộc điền"
+							lang="vi">
+							<span lang="vi">Tên đăng nhập</span>
+							<input class="inputcontent" type="text" name="username" placeholder="Nhập tên đăng nhập" lang="vi">
+							<!-- <span data-symbol="&#xf206;" lang="vi"></span> -->
+						</div>
+	
+						<!-- password -->
+						<div class="validate-input" data-validate="Password is required" lang="en">
+							<div>
+								<span lang="en">Password</span>
+								
+							</div>
+							<input class="inputcontent password" type="password" name="pass" placeholder="Type your password"
+								lang="en">
+							<!-- <span data-symbol="&#xf190;" lang="en"></span> -->
+							<span class="showhidepassword" onclick="showpassword(0)" lang="en">Show password</span>
+						</div>
+						<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
+							<div>
+								<span lang="vi">Mật khẩu</span>
+								
+							</div>
+							<input class="inputcontent password" type="password" name="pass" placeholder="Nhập mật khẩu"
+								lang="vi">
+							<span class="showhidepassword" onclick="showpassword(1)" lang="vi">Hiện mật khẩu</span>
+							<!-- <span data-symbol="&#xf190;" lang="vi"></span> -->
+						</div>
+					
+						<!-- submit -->
+						<div>
+							<div>
+								<button type="submit" lang="en">
+									Login
+								</button>
+								<button type="submit" lang="vi">
+									Đăng nhập
+								</button>
+							</div>
+						</div>
+
+						<!-- forgot password -->
+						<div class="forgotpassword">
+							<span lang="en">Forgot password?</span>
+							<span lang="vi">Quên mật khẩu?</span>
+							<a href="/forgotpassword">
+								<i lang="en">Gep help</i>
+								<i lang="vi">Hỗ trợ</i>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="up">
+				<img src="/image/index/login-banner.png" alt="">
+			</div>
+			<div class="down">
+
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.6.4.js"></script>
+	<script src="/js/signin.js"></script>
+	<script src="/js/language.js"></script>
+	<script src="/js/showhidepassword.js"></script>
+</body>
+
+</html>
