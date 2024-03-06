@@ -99,7 +99,7 @@ html {
 .content {
   display: flex;
   width: 100%;
-  max-height: 100%;
+  height: 100%;
 }
 .content .left {
   width: 40%;
@@ -122,12 +122,12 @@ html {
 .content .left .left-container .form .validate-input span:first-of-type {
   color: #0091ff;
   display: block;
-  font-size: 22px;
-  margin-bottom: 12px;
+  font-size: 20px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
-.content .left .left-container .form .validate-input input {
-  margin-bottom: 12px;
+.content .left .left-container .form .validate-input .inputcontent {
+  margin-bottom: 18px;
   height: 40px;
   width: 100%;
   border-radius: 5px;
@@ -136,8 +136,50 @@ html {
   font-size: 18px;
   outline: none;
 }
-.content .left .left-container .form .validate-input input:focus {
+.content .left .left-container .form .validate-input .inputcontent:focus {
   border-width: 2px;
+}
+.content .left .left-container .form .validate-input .inputcontent:focus::-moz-placeholder {
+  opacity: 0;
+}
+.content .left .left-container .form .validate-input .inputcontent:focus::placeholder {
+  opacity: 0;
+}
+.content .left .left-container .form .validate-input .showhidepassword-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  content: none;
+}
+.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #0091ff;
+  border-radius: 1px;
+  margin-right: 5px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword:checked::before {
+  color: #0091ff !important;
+}
+.content .left .left-container .form .validate-input .showhidepassword-container .showhidepassword {
+  color: gray;
+  font-size: 18px;
+  font-weight: 400;
 }
 .content .left .left-container .form button {
   width: 100%;
@@ -149,7 +191,7 @@ html {
   border: none;
   font-size: 20px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .content .left .left-container .form button:hover {
   background-color: white;
@@ -181,8 +223,39 @@ html {
 }
 .content .right {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content .right .up {
+  flex: 4;
 }
 .content .right .up img {
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+.content .right .down {
+  background-color: #0091ff;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.content .right .down .down-text {
+  color: white;
+}
+.content .right .down .down-pagination {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+}
+.content .right .down .down-pagination a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
 }

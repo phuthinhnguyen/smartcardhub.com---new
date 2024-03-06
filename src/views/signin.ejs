@@ -54,35 +54,31 @@
 						<div class="validate-input" data-validate="Username is required" lang="en">
 							<span lang="en">Username</span>
 							<input class="inputcontent" type="text" name="username" placeholder="Type your username" lang="en">
-							<!-- <span data-symbol="&#xf206;" lang="en"></span> -->
 						</div>
 						<div class="validate-input" data-validate="Tên đăng nhập bắt buộc điền"
 							lang="vi">
 							<span lang="vi">Tên đăng nhập</span>
 							<input class="inputcontent" type="text" name="username" placeholder="Nhập tên đăng nhập" lang="vi">
-							<!-- <span data-symbol="&#xf206;" lang="vi"></span> -->
 						</div>
 	
 						<!-- password -->
 						<div class="validate-input" data-validate="Password is required" lang="en">
-							<div>
-								<span lang="en">Password</span>
-								
-							</div>
+							<span lang="en">Password</span>
 							<input class="inputcontent password" type="password" name="pass" placeholder="Type your password"
 								lang="en">
-							<!-- <span data-symbol="&#xf190;" lang="en"></span> -->
-							<span class="showhidepassword" onclick="showpassword(0)" lang="en">Show password</span>
+							<div class="showhidepassword-container">
+								<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(0)">
+								<span class="showhidepassword" lang="en">Show password</span>
+							</div>
 						</div>
 						<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
-							<div>
-								<span lang="vi">Mật khẩu</span>
-								
-							</div>
+							<span lang="vi">Mật khẩu</span>
 							<input class="inputcontent password" type="password" name="pass" placeholder="Nhập mật khẩu"
 								lang="vi">
-							<span class="showhidepassword" onclick="showpassword(1)" lang="vi">Hiện mật khẩu</span>
-							<!-- <span data-symbol="&#xf190;" lang="vi"></span> -->
+							<div class="showhidepassword-container">
+								<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(1)">
+								<span class="showhidepassword" lang="vi">Hiện mật khẩu</span>
+							</div>
 						</div>
 					
 						<!-- submit -->
@@ -102,7 +98,7 @@
 							<span lang="en">Forgot password?</span>
 							<span lang="vi">Quên mật khẩu?</span>
 							<a href="/forgotpassword">
-								<i lang="en">Gep help</i>
+								<i lang="en">Get helps</i>
 								<i lang="vi">Hỗ trợ</i>
 							</a>
 						</div>
@@ -115,7 +111,14 @@
 				<img src="/image/index/login-banner.png" alt="">
 			</div>
 			<div class="down">
-
+				<div class="down-text">
+					<div>sdlfkjhsldf</div>
+				</div>
+				<div class="down-pagination">
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
 			</div>
 		</div>
 	</div>
