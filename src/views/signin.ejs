@@ -108,18 +108,89 @@
 		</div>
 		<div class="right">
 			<div class="up">
-				<img src="/image/index/login-banner.png" alt="">
+				<div class="img-wrap">
+					<img src="/image/index/login-banner.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img src="/image/profile_pic-1708605999456.jpg" alt="">
+				</div>
+				<div class="img-wrap">
+					<img src="/image/profile_pic-1708605894687.jpg" alt="">
+				</div>
 			</div>
 			<div class="down">
-				<div class="down-text">
-					<div>sdlfkjhsldf</div>
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
 				</div>
-				<div class="down-pagination">
-					<a href=""></a>
-					<a href=""></a>
-					<a href=""></a>
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
+				</div>
+				<div class="img-nav">
+					<a href="javascript:currentSlide(0)" class="img-nav-button"></a>
+					<a href="javascript:currentSlide(1)" class="img-nav-button"></a>
+					<a href="javascript:currentSlide(2)" class="img-nav-button"></a>
 				</div>
 			</div>
+			<script>
+				let imgslide = document.getElementsByClassName("img-wrap");
+				let textslide = document.getElementsByClassName("text-wrap");
+				let imgnav = document.getElementsByClassName("img-nav-button");
+				let index=1;
+				for (let i=0;i<textslide.length;i++){
+						textslide[i].style.display="none";
+						imgslide[i].style.display="none";
+					}
+				imgslide[0].style.display="block";
+				textslide[0].style.display="block";
+				imgnav[0].style.width = "10px";
+				imgnav[0].style.height = "10px";
+			
+				function slide(){
+					for (let i=0;i<textslide.length;i++){
+						imgslide[i].style.display="none";
+						textslide[i].style.display="none";
+						imgnav[i].style.width = "6px";
+						imgnav[i].style.height = "6px";
+					}
+					imgslide[index].style.display="block";
+					textslide[index].style.display="block";
+					imgnav[index].style.width = "10px";
+					imgnav[index].style.height = "10px";
+				   
+					if (index==textslide.length-1){
+						index=0;
+					}
+					else index++;
+				}
+				function currentSlide(currentindex){
+					for (let i=0;i<textslide.length;i++){
+						imgslide[i].style.display="none";
+						textslide[i].style.display="none";
+						imgnav[i].style.width = "6px";
+						imgnav[i].style.height = "6px";
+					}
+					index=currentindex;
+					imgslide[index].style.display="block";
+					textslide[index].style.display="block";
+					imgnav[index].style.width = "10px";
+					imgnav[index].style.height = "10px";
+				   
+				}
+				setInterval(slide,5000); 
+			</script>
+		
 		</div>
 	</div>
 	<script src="/js/jquery-3.6.4.js"></script>
