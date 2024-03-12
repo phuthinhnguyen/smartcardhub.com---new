@@ -66,21 +66,24 @@
 							<span lang="en">Password</span>
 							<input class="inputcontent password" type="password" name="pass" placeholder="Type your password"
 								lang="en">
-							<div class="showhidepassword-container">
-								<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(0)">
-								<span class="showhidepassword" lang="en">Show password</span>
-							</div>
 						</div>
+					
 						<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
 							<span lang="vi">Mật khẩu</span>
 							<input class="inputcontent password" type="password" name="pass" placeholder="Nhập mật khẩu"
 								lang="vi">
-							<div class="showhidepassword-container">
-								<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(1)">
-								<span class="showhidepassword" lang="vi">Hiện mật khẩu</span>
-							</div>
 						</div>
-					
+
+						<!-- showhidepassword -->
+						<div class="showhidepassword-container" lang="en">
+							<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(0)">
+							<span class="showhidepassword" lang="en">Show password</span>
+						</div>
+						<div class="showhidepassword-container" lang="vi">
+							<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(1)">
+							<span class="showhidepassword" lang="vi">Hiện mật khẩu</span>
+						</div>
+						
 						<!-- submit -->
 						<div>
 							<div>

@@ -53,12 +53,17 @@ html {
   display: none;
 }
 
+.validate-input {
+  position: relative;
+}
+
 .alert-validate::before {
   content: attr(data-validate);
+  position: absolute;
   max-width: 70%;
-  right: 2px;
+  bottom: calc((100% - 40px) / 2);
+  left: 10px;
   pointer-events: none;
-  place-content: attr(data-validate);
   font-family: "Afacad";
   color: #c80000;
   font-size: 13px;
@@ -116,20 +121,20 @@ html {
 .content .left .left-container .form .validate-input .inputcontent:focus::placeholder {
   opacity: 0;
 }
-.content .left .left-container .form .validate-input .showhidepassword-container {
+.content .left .left-container .form .showhidepassword-container {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword {
+.content .left .left-container .form .showhidepassword-container .checkbox-showpassword {
   -moz-appearance: none;
   -webkit-appearance: none;
   -o-appearance: none;
   outline: none;
   content: none;
 }
-.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword::before {
+.content .left .left-container .form .showhidepassword-container .checkbox-showpassword::before {
   font-family: "FontAwesome";
   content: "\f00c";
   color: transparent !important;
@@ -141,13 +146,12 @@ html {
   border: 1px solid #0091ff;
   border-radius: 1px;
   margin-right: 5px;
-  margin-top: -10px;
   cursor: pointer;
 }
-.content .left .left-container .form .validate-input .showhidepassword-container .checkbox-showpassword:checked::before {
+.content .left .left-container .form .showhidepassword-container .checkbox-showpassword:checked::before {
   color: #0091ff !important;
 }
-.content .left .left-container .form .validate-input .showhidepassword-container .showhidepassword {
+.content .left .left-container .form .showhidepassword-container .showhidepassword {
   color: gray;
   font-size: 18px;
   font-weight: 400;

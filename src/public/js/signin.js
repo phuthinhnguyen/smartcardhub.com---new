@@ -15,6 +15,10 @@
 
     $('.validate-form').on('submit',function(){
         var check = true;
+        var placeholder = document.getElementsByClassName("inputcontent");
+        for (item of placeholder){
+            item.placeholder=""
+        }
         var input = $('.validate-input .inputcontent').filter(function() {
             return $(this).attr("lang") === localStorage["language"];
           });
