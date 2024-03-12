@@ -27,25 +27,26 @@ html {
 
 
 .validate-input {
-  position: relative;
+  // position: relative;
 }
 
 .alert-validate::before {
   content: attr(data-validate);
-  position: absolute;
+  // position: absolute;
   max-width: 70%;
-  background-color: #fff;
-  border: 1px solid #c80000;
-  border-radius: 2px;
-  padding: 4px 25px 4px 10px;
-  bottom: calc((100% - 20px) / 2);
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -o-transform: translateY(50%);
-  transform: translateY(50%);
+  // background-color: #fff;
+  // border: 1px solid #c80000;
+  // border-radius: 2px;
+  // padding: 4px 25px 4px 10px;
+  // bottom: calc((100% - 20px) / 2);
+  // -webkit-transform: translateY(50%);
+  // -moz-transform: translateY(50%);
+  // -ms-transform: translateY(50%);
+  // -o-transform: translateY(50%);
+  // transform: translateY(50%);
   right: 2px;
   pointer-events: none;
+  place-content:  attr(data-validate);
 
   @include font($fontAfacad);
   color: #c80000;
@@ -53,8 +54,8 @@ html {
   line-height: 1.4;
   text-align: left;
 
-  visibility: hidden;
-  opacity: 0;
+  // visibility: hidden;
+  // opacity: 0;
 
   -webkit-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
@@ -62,26 +63,26 @@ html {
   transition: opacity 0.4s;
 }
 
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  display: block;
-  position: absolute;
-  color: #c80000;
-  font-size: 16px;
-  bottom: calc((100% - 20px) / 2);
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -o-transform: translateY(50%);
-  transform: translateY(50%);
-  right: 8px;
-}
+// .alert-validate::after {
+//   content: "\f06a";
+//   font-family: FontAwesome;
+//   display: block;
+//   position: absolute;
+//   color: #c80000;
+//   font-size: 16px;
+//   bottom: calc((100% - 20px) / 2);
+//   -webkit-transform: translateY(50%);
+//   -moz-transform: translateY(50%);
+//   -ms-transform: translateY(50%);
+//   -o-transform: translateY(50%);
+//   transform: translateY(50%);
+//   right: 8px;
+// }
 
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
+// .alert-validate:hover:before {
+//   visibility: visible;
+//   opacity: 1;
+// }
 
 // content
 .content {
