@@ -108,23 +108,25 @@
     animation: messagesshow .7s;
     z-index: 2;
     .messages-show-header{
-        background-color: dodgerblue;
+        background-color: rgb(16, 120, 206);
         height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 5px;
+     
     }
     .messages-show-body{
-        height: 50px;
-        background-color: white;
-        padding: 10px;
+        height: 30px;
+        background-color: $button-background-hover;
+        padding: 20px;
         display: flex;
         align-items: center;
         font-family: $fontAfacad;
         p{
-            font-size: 15px;
+            font-size: 16px;
             color: black;
+            margin: 0;
         }
     }
 }

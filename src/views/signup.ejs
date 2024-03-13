@@ -9,83 +9,72 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 	<script src="/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/font/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/signup.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/signin.css">
 </head>
 
 <body>
-	<div>
-		<div>
-			<div class="logo">
-				<img src="" alt="" id="logo">
-			</div>
-			<div>
-				<form class="validate-form" action="/<%= datauser[0].cardid %>/processsignup"
-					method="post">
-
-					<!-- label -->
-					<span lang="en">
-						Hi! I'm SmartCard<br>
-						Join me now...
-					</span>
-					<span lang="vi">
-						Xin chào bạn đến với SmartCard
-					</span>
-
-					<!-- card id -->
-					<div>
-						<span lang="en">Card ID</span>
-						<span lang="vi">ID Thẻ</span>
-						<input class="inputcontent" type="text" name="cardid" placeholder="<%= datauser[0].cardid %>"
-							disabled>
-					</div>
-
-					<!-- username -->
-					<div class="validate-input" data-validate="Username is required" lang="en">
-						<span lang="en">Username</span>
-						<input class="inputcontent" type="text" name="username" placeholder="Type your username" lang="en">
-					</div>
-					<div class="validate-input" data-validate="Tên đăng nhập bắt buộc điền" lang="vi">
-						<span lang="vi">Tên đăng nhập</span>
-						<input class="inputcontent" type="text" name="username" placeholder="Nhập tên đăng nhập" lang="vi">
-					</div>
-
-					<!-- password -->
-					<div class="validate-input" data-validate="Password is required" lang="en">
-						<div>
+	<div class="content">
+		<div class="left">
+			<div class="left-container">
+				<div class="logo">
+					<img src="/image/index/logo.png" alt="" id="logo">
+				</div>
+				<div class="form">
+					<form class="validate-form" action="/<%= datauser[0].cardid %>/processsignup"
+						method="post">
+	
+						<!-- card id -->
+						<div class="validate-input">
+							<span lang="en">Card ID</span>
+							<span lang="vi">ID Thẻ</span>
+							<input class="inputcontent" type="text" name="cardid" placeholder="<%= datauser[0].cardid %>"
+								disabled>
+						</div>
+	
+						<!-- username -->
+						<div class="validate-input" data-validate="Username is required" lang="en">
+							<span lang="en">Username</span>
+							<input class="inputcontent" type="text" name="username" placeholder="Type your username" lang="en">
+						</div>
+						<div class="validate-input" data-validate="Tên đăng nhập bắt buộc điền" lang="vi">
+							<span lang="vi">Tên đăng nhập</span>
+							<input class="inputcontent" type="text" name="username" placeholder="Nhập tên đăng nhập" lang="vi">
+						</div>
+	
+						<!-- password -->
+						<div class="validate-input" data-validate="Password is required" lang="en">
 							<span lang="en">Password</span>
-							<span class="showhidepassword" onclick="showpassword(0)" lang="en">Show password</span>
+							<input class="inputcontent password" type="password" name="password" placeholder="Type your password"
+								lang="en">
 						</div>
-						<input class="inputcontent password" type="password" name="password" placeholder="Type your password" lang="en">
-					</div>
-					<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
-						<div>
+						<div class="validate-input" data-validate="Mật khẩu bắt buộc điền" lang="vi">
 							<span lang="vi">Mật khẩu</span>
-							<span class="showhidepassword" onclick="showpassword(1)" lang="vi">Hiện mật khẩu</span>
+							<input class="inputcontent password" type="password" name="password" placeholder="Nhập mật khẩu"
+								lang="vi">
 						</div>
-						<input class="inputcontent password" type="password" name="password" placeholder="Nhập mật khẩu" lang="vi">
-					</div>
+	
+						<!-- name -->
+						<div class="validate-input" data-validate="Name is required" lang="en">
+							<span lang="en">Name</span>
+							<input class="inputcontent" type="text" name="name" placeholder="Type your name" id="nameeng" lang="en">
+						</div>
+						<div class="validate-input" data-validate="Tên bắt buộc điền" lang="vi">
+							<span lang="vi">Tên của bạn</span>
+							<input class="inputcontent" type="text" name="name" placeholder="Nhập tên" id="nameviet" lang="vi">
+						</div>
+	
+						<!-- showhidepassword -->
+						<div class="showhidepassword-container" lang="en">
+							<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(0)">
+							<span class="showhidepassword" lang="en">Show password</span>
+						</div>
+						<div class="showhidepassword-container" lang="vi">
+							<input type="checkbox" class="checkbox-showpassword" onclick="showpassword(1)">
+							<span class="showhidepassword" lang="vi">Hiện mật khẩu</span>
+						</div>
 
-					<!-- name -->
-					<div class="validate-input" data-validate="Name is required" lang="en">
-						<span lang="en">Name</span>
-						<input class="inputcontent" type="text" name="name" placeholder="Type your name" id="name" lang="en">
-					</div>
-					<div class="validate-input" data-validate="Tên bắt buộc điền" lang="vi">
-						<span lang="vi">Tên của bạn</span>
-						<input class="inputcontent" type="text" name="name" placeholder="Nhập tên" id="name" lang="vi">
-					</div>
-
-					<!-- Already have an account? -->
-					<div>
-						<a href="/signin">
-							<i lang="en">Already have an account?</i>
-							<i lang="vi">Đã có tài khoản?</i>
-						</a>
-					</div>
-
-					<!-- submit -->
-					<div>
+						<!-- submit -->
 						<div>
 							<button lang="en">
 								Sign up
@@ -94,9 +83,105 @@
 								Đăng ký
 							</button>
 						</div>
-					</div>
-				</form>
+						
+						<!-- sign in -->
+						<div class="forgotpassword">
+							<span lang="en">Already have account?</span>
+							<span lang="vi">Đã có tài khoản?</span>
+							<a href="/signin">
+								<i lang="en">Sign in</i>
+								<i lang="vi">Đăng nhập</i>
+							</a>
+						</div>
+					</form>
+				</div>
 			</div>
+		</div>
+		<div class="right">
+			<div class="up">
+				<div class="img-wrap">
+					<img src="/image/index/login-banner.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img src="/image/profile_pic-1708605999456.jpg" alt="">
+				</div>
+				<div class="img-wrap">
+					<img src="/image/profile_pic-1708605894687.jpg" alt="">
+				</div>
+			</div>
+			<div class="down">
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<h2>Tiện lợi - Tiết kiệm - Số hóa 3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm</p>
+					</div>
+				</div>
+				<div class="img-nav">
+					<a href="javascript:currentSlide(0)" class="img-nav-button"></a>
+					<a href="javascript:currentSlide(1)" class="img-nav-button"></a>
+					<a href="javascript:currentSlide(2)" class="img-nav-button"></a>
+				</div>
+			</div>
+			<script>
+				let imgslide = document.getElementsByClassName("img-wrap");
+				let textslide = document.getElementsByClassName("text-wrap");
+				let imgnav = document.getElementsByClassName("img-nav-button");
+				let index=1;
+				for (let i=0;i<textslide.length;i++){
+						textslide[i].style.display="none";
+						imgslide[i].style.display="none";
+					}
+				imgslide[0].style.display="block";
+				textslide[0].style.display="block";
+				imgnav[0].style.width = "10px";
+				imgnav[0].style.height = "10px";
+			
+				function slide(){
+					for (let i=0;i<textslide.length;i++){
+						imgslide[i].style.display="none";
+						textslide[i].style.display="none";
+						imgnav[i].style.width = "6px";
+						imgnav[i].style.height = "6px";
+					}
+					imgslide[index].style.display="block";
+					textslide[index].style.display="block";
+					imgnav[index].style.width = "10px";
+					imgnav[index].style.height = "10px";
+				   
+					if (index==textslide.length-1){
+						index=0;
+					}
+					else index++;
+				}
+				function currentSlide(currentindex){
+					for (let i=0;i<textslide.length;i++){
+						imgslide[i].style.display="none";
+						textslide[i].style.display="none";
+						imgnav[i].style.width = "6px";
+						imgnav[i].style.height = "6px";
+					}
+					index=currentindex;
+					imgslide[index].style.display="block";
+					textslide[index].style.display="block";
+					imgnav[index].style.width = "10px";
+					imgnav[index].style.height = "10px";
+				   
+				}
+				setInterval(slide,5000); 
+			</script>
+		
 		</div>
 	</div>
 

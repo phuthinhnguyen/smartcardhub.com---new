@@ -17,6 +17,10 @@
 
     $('.validate-form').on('submit',function(){
         var check = true;
+        var placeholder = document.getElementsByClassName("inputcontent");
+        for (i=1; i < placeholder.length; i++){
+            placeholder[i].placeholder=""
+        }
         var input = $('.validate-input .inputcontent').filter(function() {
             return $(this).attr("lang") === localStorage["language"];
           });
@@ -65,7 +69,7 @@
 
     function showValidate(input) {
         var thisAlert = $(input).parent();
-
+        input.value="";
         $(thisAlert).addClass('alert-validate');
     }
 

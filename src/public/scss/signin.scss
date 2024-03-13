@@ -77,13 +77,11 @@ html {
         margin-top: 50px;
         .validate-input {
           span {
-            &:first-of-type {
-              color: $text-color;
-              display: block;
-              font-size: 20px;
-              margin-bottom: 10px;
-              font-weight: 500;
-            }
+            color: $text-color;
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
           }
 
           .inputcontent {
@@ -175,8 +173,9 @@ html {
           margin-top: 20px;
 
           span {
-            font-size: 18px;
+            font-size: 16px;
             color: gray;
+            font-style: italic;
           }
 
           a {
@@ -184,10 +183,13 @@ html {
 
             i {
               color: $text-color;
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 500;
               font-style: normal;
               margin-left: 5px;
+              &:hover{
+                font-style: italic;
+              }
             }
           }
         }
@@ -238,7 +240,7 @@ html {
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-
+     
       .text-wrap {
         width: 60%;
         @keyframes textwrap {

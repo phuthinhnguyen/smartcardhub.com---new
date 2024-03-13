@@ -29,7 +29,7 @@ html {
   z-index: 2;
 }
 .messages-show .messages-show-header {
-  background-color: dodgerblue;
+  background-color: rgb(16, 120, 206);
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -37,16 +37,17 @@ html {
   padding: 5px;
 }
 .messages-show .messages-show-body {
-  height: 50px;
+  height: 30px;
   background-color: white;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   font-family: "Afacad";
 }
 .messages-show .messages-show-body p {
-  font-size: 15px;
+  font-size: 16px;
   color: black;
+  margin: 0;
 }
 
 .messages-hide {
@@ -95,7 +96,7 @@ html {
   width: 100%;
   margin-top: 50px;
 }
-.content .left .left-container .form .validate-input span:first-of-type {
+.content .left .left-container .form .validate-input span {
   color: #0091ff;
   display: block;
   font-size: 20px;
@@ -183,18 +184,22 @@ html {
   margin-top: 20px;
 }
 .content .left .left-container .form .forgotpassword span {
-  font-size: 18px;
+  font-size: 16px;
   color: gray;
+  font-style: italic;
 }
 .content .left .left-container .form .forgotpassword a {
   text-decoration: none;
 }
 .content .left .left-container .form .forgotpassword a i {
   color: #0091ff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   font-style: normal;
   margin-left: 5px;
+}
+.content .left .left-container .form .forgotpassword a i:hover {
+  font-style: italic;
 }
 .content .right {
   width: 60%;
