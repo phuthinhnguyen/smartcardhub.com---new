@@ -278,7 +278,7 @@ html {
 }
 @media screen and (max-width: 1200px) {
   .content {
-    background-image: url(../image/index/login-banner.png);
+    background-image: url(../image/index/signin2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -291,6 +291,7 @@ html {
   }
   .content .left .left-container {
     background-color: white;
+    opacity: 0.9;
     border-radius: 10px;
   }
   .content .left .left-container .form {

@@ -294,7 +294,7 @@ html {
 }
 @media screen and (max-width:1200px){
   .content{
-    background-image: url(../image/index/login-banner.png);
+    background-image: url(../image/index/signin2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -305,6 +305,7 @@ html {
       width: 100%;
       .left-container{
         background-color: $button-background-hover;
+        opacity: .9;
         border-radius: 10px;
         .form{
           margin-top: 25px;
