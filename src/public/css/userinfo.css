@@ -8,10 +8,6 @@
     right: 50px;
   }
 }
-@font-face {
-  font-family: "Jost";
-  src: url("/font/Jost/Jost-VariableFont_wght.ttf");
-}
 * {
   margin: 0px;
   padding: 0px;
@@ -20,7 +16,7 @@
 
 body,
 html {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,7 +110,7 @@ button:hover {
 }
 .menu-control .right .nav-icon .tooltiptext {
   visibility: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   font-size: 13px;
   width: 60px;
   background-color: black;
@@ -301,7 +297,7 @@ button:hover {
   width: 100%;
   color: lightgray;
   font-style: italic;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   font-weight: 600;
   font-size: 26px;
 }
@@ -333,7 +329,7 @@ button:hover {
   display: block;
   padding: 10px;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   font-size: 15px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -356,7 +352,7 @@ button:hover {
   left: 15%;
   border-radius: 50px;
   border: 10px solid black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   overflow: hidden;
 }
 .content .show .wrap {
@@ -391,7 +387,7 @@ button:hover {
 }
 .content .show .wrap .showname p {
   overflow-x: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   color: black;
   font-weight: 600;
   font-size: 20px;
@@ -420,7 +416,7 @@ button:hover {
   max-width: 160px;
   height: 37px;
   border-radius: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   background-color: transparent;
   border: 1px solid white;
   font-size: 14px;
@@ -486,7 +482,7 @@ button:hover {
 }
 #container-showlink {
   width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   margin-top: 33px;
   border: 1px solid lightgray;
   padding: 20px;

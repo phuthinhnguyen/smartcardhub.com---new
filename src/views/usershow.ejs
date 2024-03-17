@@ -14,78 +14,112 @@
 </head>
 
 <!-- <body style="<%= datauser.colortheme %>" id="color"> -->
-<body style="background-color: dodgerblue;color: white;" id="color">
+<body id="color">
 	<div class="content-show">
-		<div class="avatar">
-			<img src="<%= datauser.avatar %>" alt="" />
-		</div>
-		<div class="name">
-			<p id="name">
-				<%= datauser.name2 %>
-			</p>
-		</div>
-		<p class="bio">
-			<%= datauser.bio %>
-		</p>
-		<div class="action">
-			<button onclick="call()">
-				<i class="fa fa-phone fa-2x"></i>
-			</button>
-			<button onclick="email()"><i class="fa fa-envelope fa-2x"></i></button>
+		<div class="cover">
+			<img src="/image/index/signin1.jpg" alt="" />
+			<div class="avatar" onclick="avatarclick()">
+				<img src="<%= datauser.avatar %>" alt="" />
+			</div>
+			<div id="linkcontainer">
+				<a href="javascript:openlink('<%= datauser.link.linktype[0] %>','<%= datauser.link.inputlink[0] %>');" class="a1"><img src="/image/index/youtube.png" alt=""></a>
+				<a href="" class="a2"><img src="/image/index/instagram.png" alt=""></a>
+				<a href="" class="a3"><img src="/image/index/skype.png" alt=""></a>
+				<a href="" class="a4"><img src="/image/index/facebook.png" alt=""></a>
+				<a href="" class="a5"><img src="/image/index/twitter.png" alt=""></a>
+				<a href="" class="a6"><img src="/image/index/momo.png" alt=""></a>
+				<a href="" class="a7"><img src="/image/index/pinterest.png" alt=""></a>
+				<a href="" class="a8"><img src="/image/index/gmail.png" alt=""></a>
+				<a href="" class="a9"><img src="/image/index/yelp.png" alt=""></a>
+				<a href="" class="a10"><img src="/image/index/linkind.png" alt=""></a>
+				<a href="" class="a11"><img src="/image/index/tiktok.png" alt=""></a>
+				<a href="" class="a12"><img src="/image/index/zalo.png" alt=""></a>
+			</div>
 		</div>
 		<script>
-			$(".action")
-				.children("button")
-				.css({ color: document.body.style.color });
-			function call() {
-				const phoneNumber = "<%= datauser.phone %>";
-				window.location.href = `tel:${phoneNumber}`;
-			}
-
-			function email() {
-				const email = "<%= datauser.email %>";
-				window.location.href = `mailto:${email}`;
+			let linkcontainer = document.getElementById("linkcontainer")
+			function avatarclick(){
+				linkcontainer.style.display = "block"
 			}
 		</script>
-		<h2>CONNECT</h2>
-		<div class="link">
-			<% if (datauser.link!="" ) { %>
-				<% for(let i=0; i < datauser.link.linktype.length; i++) { %>
-					<div class="wrap" onclick="openlink('<%= datauser.link.linktype[i] %>','<%= datauser.link.inputlink[i] %>')">
-						<!-- <img src="image/userinfo/<%= datauser.link.linktype[i].toLowerCase() %>.png" alt="" /> -->
-						<img src="" alt="">
-						<p id="link">
-							<%= datauser.link.inputtitle[i] %>
-						</p>
-					</div>
-					<% } %>
+		<div class="info">
+			<div class="name">
+				<p id="name">
+					<%= datauser.name2 %>
+				</p>
+			</div>
+			<p class="bio">
+				<%= datauser.bio %>
+			</p>
+			<div class="action">
+				<button onclick="call()">
+					<i class="fa fa-phone fa-2x"></i>
+				</button>
+				<button onclick="email()"><i class="fa fa-envelope fa-2x"></i></button>
+			</div>
+			<script>
+				$(".action")
+					.children("button")
+					.css({ color: document.body.style.color });
+				function call() {
+					const phoneNumber = "<%= datauser.phone %>";
+					window.location.href = `tel:${phoneNumber}`;
+				}
+	
+				function email() {
+					const email = "<%= datauser.email %>";
+					window.location.href = `mailto:${email}`;
+				}
+			</script>
+			<div class="paragraph">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+				</p>
+			</div>
+			<div class="link">
+				<% if (datauser.link!="" ) { %>
+					<% for(let i=0; i < datauser.link.linktype.length; i++) { %>
+						<div class="wrap" onclick="openlink('<%= datauser.link.linktype[i] %>','<%= datauser.link.inputlink[i] %>')">
+							<!-- <img src="image/userinfo/<%= datauser.link.linktype[i].toLowerCase() %>.png" alt="" /> -->
+							<img src="" alt="">
+							<p id="link">
+								<%= datauser.link.inputtitle[i] %>
+							</p>
+						</div>
 						<% } %>
-							<script>
-								function openlink(linktype,link) {
-									if (linktype=="Gmail") {
-										// window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${link}`);
-										window.location.href = `mailto:${link}`
+							<% } %>
+								<script>
+									function openlink(linktype,link) {
+										if (linktype=="Gmail") {
+											// window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${link}`);
+											window.location.href = `mailto:${link}`
+										}
+										else if (linktype=="Zalo") {
+											window.open(`http://zalo.me/${link}`)
+											// window.location.href='zalo://chat'
+											// window.location.href= "intent://instagram.com/#Intent;scheme=http;package=com.instagram.android;end"; 		
+										}
+										else if (linktype=="WhatsApp") {
+											window.open(`https://wa.me/${link}`)
+										}
+										else if (linktype=="Momo") {
+											// window.open(`https://page.momoapp.vn/tfDDP2TENsk`)
+											window.open(`https://nhantien.momo.vn/${link}`)
+										}
+										else window.open(link);
+	
 									}
-									else if (linktype=="Zalo") {
-										window.open(`http://zalo.me/${link}`)
-										// window.location.href='zalo://chat'
-										// window.location.href= "intent://instagram.com/#Intent;scheme=http;package=com.instagram.android;end"; 		
-									}
-									else if (linktype=="WhatsApp") {
-										window.open(`https://wa.me/${link}`)
-									}
-									else if (linktype=="Momo") {
-										// window.open(`https://page.momoapp.vn/tfDDP2TENsk`)
-										window.open(`https://nhantien.momo.vn/${link}`)
-									}
-									else window.open(link);
-
-								}
-							</script>
+								</script>
+			</div>
 		</div>
+		
 	</div>
 	<footer>
-		<img src="" alt="" />
+		<img src="/image/index/logo.png" alt="" />
+		<p>Copyright © 2024 · All Rights Reserved ·</p>
 	</footer>
 </body>
 

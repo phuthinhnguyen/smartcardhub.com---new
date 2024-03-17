@@ -23,22 +23,22 @@ body {
   row-gap: 50px;
 }
 .generate-cardid h2 {
-  font-family: "AdamGorry";
+  font-family: "Afacad";
   font-weight: 900;
-  font-family: "AdamGorry";
+  font-family: "Afacad";
   font-size: calc(var(--index) * 1.2);
   line-height: 1.75;
   font-weight: 600;
   letter-spacing: 2px;
-  color: rgb(231, 229, 229);
+  color: white;
   font-size: 25px;
 }
 .generate-cardid #cardid {
   line-height: 1.75;
   font-size: calc(var(--index) * 0.72);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
   font-weight: 400;
-  color: rgb(228, 227, 227);
+  color: #0091ff;
   font-size: 20px;
 }
 .generate-cardid button {
@@ -50,7 +50,7 @@ body {
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
-  font-family: "AdamGorry";
+  font-family: "Afacad";
   letter-spacing: 2px;
   font-weight: 900;
   color: white;
@@ -72,7 +72,7 @@ body {
   z-index: 2;
 }
 .messages-show .messages-show-header {
-  background-color: dodgerblue;
+  background-color: rgb(16, 120, 206);
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -80,16 +80,17 @@ body {
   padding: 5px;
 }
 .messages-show .messages-show-body {
-  height: 50px;
+  height: 30px;
   background-color: white;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Afacad";
 }
 .messages-show .messages-show-body p {
-  font-size: 15px;
+  font-size: 16px;
   color: black;
+  margin: 0;
 }
 
 .messages-hide {

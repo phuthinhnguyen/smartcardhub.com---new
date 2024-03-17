@@ -11,13 +11,9 @@
 
 body,
 html {
-  @include font($fontSegoeUI);
+  @include font($fontAfacad);
   @include scrollbar(5px, transparent, black, black);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  padding: 50px 0 10px 0;
+  padding: 0 10%;
 }
 
 input {
@@ -42,144 +38,333 @@ button {
 
 // CSS content-show
 .content-show {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-
+  .cover {
+    position: relative;
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 600px;
     }
-  }
-
-  .name {
-    margin-top: 30px;
-
-    p {
-      @include font($fontSegoeUI);
-      font-weight: 500;
-      font-size: 30px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
-
-  .bio {
-    font-size: 17px;
-    margin-top: 20px;
-    font-style: italic;
-  }
-
-  h2 {
-    text-align: center;
-    font-size: 20px;
-    margin: auto;
-    margin-top: 100px;
-  }
-
-  .action {
-    margin: auto;
-    margin-top: 40px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
-    color: inherit;
-
-    button {
+    .avatar {
       width: 200px;
-      max-width: 160px;
-      height: 40px;
-      border-radius: 10px;
-      font-family: $fontSegoeUI;
-      background-color: transparent;
-      border: 1px solid white;
-      font-size: 14px;
-      transition: .5s;
-
-      &:hover {
-        background-color: white;
-
-        i {
-          color: black;
-        }
-      }
-    }
-  }
-
-  .link {
-    max-width: 800px;
-    width: 100%;
-    padding: 25px;
-    margin-bottom: 40px;
-    padding-top: 0;
-
-    .wrap {
-      width: 100%;
-      border: 1px solid white;
-      border-radius: 50px;
-      cursor: pointer;
-      height: 55px;
-      line-height: 55px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      column-gap: 5px;
-      transition: 0.6s;
-      margin-top: 30px;
-
-      &:hover {
-        background-color: white;
-
-        p {
-          color: black;
-        }
-      }
-
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translate( -50%, 0 );
+      z-index: 1;
       img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin-left: 5px;
-      }
-
-      p {
         width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        transition: .6s;
-        margin-left: -40px;
+        height: 100%;
+      }
+    }
+    #linkcontainer{
+      @keyframes linkcontaineranimation {
+        from {
+          rotate: (8deg);
+          opacity: 0;
+        }
+      
+        to {
+          rotate: 0;
+          opacity: 1;
+        }
+      }
+      display: none;
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      bottom: -155px;
+      left: 50%;
+      transform: translate(-50%,0);
+      // background-color: $text-color;
+      border-radius: 50%;
+      animation: linkcontaineranimation 0.8s;
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $button-background-hover;
+        color: white;
+        padding: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        img{
+          width: 100%;
+          height: auto;
+        }
+        &:hover{
+          background-color: rgb(175, 175, 175);
+        }
+      }
+      .a1{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+      .a2{
+        position: absolute;
+        top: 9%;
+        left: 64%;
+       
+      }
+      .a3{
+        position: absolute;
+        top: 24%;
+        left: 79%;
+      }
+      .a4{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+      }
+      .a5{
+        position: absolute;
+        bottom: 24%;
+        left: 79%;
+      }
+      .a6{
+        position: absolute;
+        bottom: 9%;
+        left: 64%;
+      }
+      .a7{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+      .a8{
+        position: absolute;
+        right: 64%;
+        bottom: 9%;
+      }
+      .a9{
+        position: absolute;
+        right: 79%;
+        bottom: 24%;
+      }
+      .a10{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+      }
+      .a11{
+        position: absolute;
+        top: 24%;
+        right: 79%;
+      }
+      .a12{
+        position: absolute;
+        top: 9%;
+        right: 64%;
       }
     }
   }
-}
+ 
+  .info {
+    margin-top: 70px;
+    .name {
+      margin-top: 30px;
+  
+      p {
+        @include font($fontAfacad);
+        font-weight: 500;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $text-color;
+      }
+    }
+  
+    .bio {
+      font-size: 18px;
+      text-align: center;
+      color: gray;
+      text-transform: capitalize;
+    }
+  
+    .action {
+      margin: auto;
+      margin-top: 40px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 40px;
+      color: inherit;
+  
+      button {
+        width: 50%;
+        max-width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        font-family: $fontAfacad;
+        background-color: $text-color;
+        border: 1px solid white;
+        font-size: 14px;
+        transition: .5s;
+        color: $button-background-hover;
+
+        &:hover {
+          background-color: $button-background-hover;
+          border: 2px solid $text-color;  
+          color: $text-color;
+          font-weight: 500;
+          transition: 0.3s;;
+        }
+      }
+    }
+    .paragraph{
+      margin-top: 40px;
+      padding: 0 80px;
+      p{
+        color: gray;
+        text-align: justify;
+        @include font($fontAfacad);
+        font-size: 20px;
+        &:last-of-type{
+          margin-top: 10px;
+        }
+      }
+    }
+    .link {
+      max-width: 800px;
+      width: 100%;
+      padding: 25px;
+      margin-bottom: 40px;
+      padding-top: 0;
+  
+      .wrap {
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 50px;
+        cursor: pointer;
+        height: 55px;
+        line-height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 5px;
+        transition: 0.6s;
+        margin-top: 30px;
+  
+        &:hover {
+          background-color: white;
+  
+          p {
+            color: black;
+          }
+        }
+  
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          margin-left: 5px;
+        }
+  
+        p {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          transition: .6s;
+          margin-left: -40px;
+        }
+      }
+    }
+  }
+  }
+
 
 // CSS footer
 footer {
   width: 100%;
-  bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   img {
     width: 210px;
     height: 40px;
   }
+  p{
+    color: $text-color;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width:1400px) {
+  body,html{
+    padding: 0;
+  }
 }
 
+@media screen and (max-width:1200px) {
+  .content-show{
+    .cover{
+      img{
+        max-height: 500px;
+      }
+    }
+  }
+}
+@media screen and (max-width:800px) {
+  .content-show{
+    .cover{
+      img{
+        max-height: 400px;
+      }
+    }
+  }
+}
+@media screen and (max-width:600px) {
+  .content-show{
+    .cover{
+      .avatar{
+        width: 150px;
+        height: 150px;
+      }
+      #linkcontainer{
+        width: 280px;
+        height: 280px;
+        bottom: -140px;
+        a{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .info{
+      .paragraph{
+        padding: 0 30px;
+      }
+    }
+  }
+  footer{
+    img{
+      width: 150px;
+      height: 30px;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+}
 @media screen and (max-width:500px) {
   .content-show {
     width: 100%;

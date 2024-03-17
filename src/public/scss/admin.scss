@@ -15,20 +15,20 @@ body{
     flex-direction: column;
     row-gap: 50px;
     h2{
-        font-family: $fontAdamGorry;
+        font-family: $fontAfacad;
         font-weight: 900;
-        font-family: $fontAdamGorry;
+        font-family: $fontAfacad;
         font-size: calc(var(--index) * 1.2);
         line-height: 1.75;
         font-weight: 600;
         letter-spacing: 2px;
-        color: $title-color;
+        color: $button-background-hover;
         font-size: 25px;
     }
     #cardid{
         line-height: 1.75;
         font-size: calc(var(--index) * 0.72);
-        font-family: $fontSegoeUI;
+        font-family: $fontAfacad;
         font-weight: 400;
         color: $text-color;
         font-size: 20px;
@@ -40,7 +40,7 @@ body{
         border: none;
         user-select: none;
         cursor: pointer;
-        font-family: $fontAdamGorry;
+        font-family: $fontAfacad;
         letter-spacing: 2px;
         font-weight: 900;
         color: white;

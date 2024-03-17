@@ -2,11 +2,6 @@
 @import "_variable";
 @import "_mixin";
 
-// Fonts
-@font-face {
-  font-family: "Jost";
-  src: url('/font/Jost/Jost-VariableFont_wght.ttf');
-}
 
 
 // Restyle
@@ -18,7 +13,7 @@
 
 body,
 html {
-  @include font($fontSegoeUI);
+  @include font($fontAfacad);
   @include scrollbar(5px, transparent, black, black);
   background-position: center;
   background-repeat: no-repeat;
@@ -108,7 +103,7 @@ button {
 
       .tooltiptext {
         visibility: hidden;
-        @include font($fontSegoeUI);
+        @include font($fontAfacad);
         font-size: 13px;
         width: 60px;
         background-color: black;
@@ -264,7 +259,7 @@ button {
               width: 100%;
               color: lightgray;
               font-style: italic;
-              @include font($fontSegoeUI);
+              @include font($fontAfacad);
               font-weight: 600;
               font-size: 26px;
             }
@@ -298,7 +293,7 @@ button {
               display: block;
               padding: 10px;
               text-align: center;
-              @include font($fontSegoeUI);
+              @include font($fontAfacad);
               font-size: 15px;
               user-select: none;
               cursor: pointer;
@@ -327,7 +322,7 @@ button {
     left: 15%;
     border-radius: 50px;
     border: 10px solid black;
-    @include font($fontSegoeUI);
+    @include font($fontAfacad);
     overflow: hidden;
 
     .wrap {
@@ -365,7 +360,7 @@ button {
 
         p {
           overflow-x: hidden;
-          @include font($fontSegoeUI);
+          @include font($fontAfacad);
           color: black;
           font-weight: 600;
           font-size: 20px;
@@ -396,7 +391,7 @@ button {
           max-width: 160px;
           height: 37px;
           border-radius: 10px;
-          font-family: $fontSegoeUI;
+          font-family: $fontAfacad;
           background-color: transparent;
           border: 1px solid white;
           font-size: 14px;
@@ -478,7 +473,7 @@ button {
 
 #container-showlink {
   width: 100%;
-  @include font($fontSegoeUI);
+  @include font($fontAfacad);
   margin-top: 33px;
   border: 1px solid lightgray;
   padding: 20px;
