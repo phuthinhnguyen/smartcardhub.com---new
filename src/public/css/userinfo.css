@@ -17,12 +17,7 @@
 body,
 html {
   font-family: "Afacad";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
-  min-height: 100vh;
-  padding-bottom: 50px;
 }
 body ::-webkit-scrollbar,
 html ::-webkit-scrollbar {
@@ -582,259 +577,6 @@ button:hover {
   cursor: pointer;
 }
 
-#guides {
-  width: 100%;
-  height: calc(100% + 50px);
-  background-color: rgb(19, 16, 16);
-  position: absolute;
-  top: 0;
-  opacity: 0.8;
-  z-index: 1000;
-}
-#guides #welcome {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 200px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  padding: 40px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#guides #welcome p {
-  font-size: 16px;
-}
-#guides #welcome p:first-of-type {
-  font-size: 26px;
-}
-#guides #welcome p:last-of-type {
-  font-size: 15px;
-}
-#guides #welcome .item {
-  width: 50%;
-  height: 50px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
-#guides #welcome .item div {
-  cursor: pointer;
-  padding: 10px;
-}
-#guides #welcome .item div:hover {
-  color: gray;
-}
-#guides #uploadavatar,
-#guides #changename,
-#guides #addlink,
-#guides #edittitle,
-#guides #editlink,
-#guides #preview,
-#guides #edittitle-responsive,
-#guides #editlink-responsive,
-#guides #changename-responsive,
-#guides #uploadavatar-responsive,
-#guides #addlink-responsive {
-  font-size: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 200px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  padding: 40px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 50px;
-  width: 300px;
-  padding: 15px 0;
-  display: none;
-}
-#guides #uploadavatar p,
-#guides #changename p,
-#guides #addlink p,
-#guides #edittitle p,
-#guides #editlink p,
-#guides #preview p,
-#guides #edittitle-responsive p,
-#guides #editlink-responsive p,
-#guides #changename-responsive p,
-#guides #uploadavatar-responsive p,
-#guides #addlink-responsive p {
-  margin: 0;
-  padding: 0;
-}
-@keyframes handanimationtoleft {
-  0% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-#guides #uploadavatar i,
-#guides #changename i,
-#guides #addlink i,
-#guides #edittitle i,
-#guides #editlink i,
-#guides #preview i,
-#guides #edittitle-responsive i,
-#guides #editlink-responsive i,
-#guides #changename-responsive i,
-#guides #uploadavatar-responsive i,
-#guides #addlink-responsive i {
-  margin-right: 20px;
-  font-size: 30px;
-  animation: handanimationtoleft 1s infinite;
-}
-#guides #uploadavatar {
-  left: calc(50% + 230px);
-  top: 420px;
-  border-radius: 20px;
-}
-#guides #uploadavatar-responsive {
-  left: calc(50% - 235px);
-  top: 420px;
-  border-radius: 20px;
-}
-#guides #uploadavatar-responsive i {
-  animation: handanimationtoright 1s infinite;
-  margin-left: 20px;
-}
-#guides #changename {
-  left: calc(50% + 410px);
-  top: 520px;
-  border-radius: 20px;
-}
-#guides #changename-responsive {
-  top: 520px;
-  border-radius: 20px;
-  left: calc(50% + 65px);
-}
-#guides #changename-responsive i {
-  animation: handanimationtoright 1s infinite;
-  margin-left: 20px;
-}
-#guides #nexttoaddlink,
-#guides #nexttolinkcontainer,
-#guides #done {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 200px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  padding: 40px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  display: none;
-  left: 90%;
-  top: 45%;
-  width: 150px;
-  height: 60px;
-  padding: 15px 0;
-  cursor: pointer;
-  transition: 0.6s;
-  font-size: 20px;
-}
-#guides #nexttoaddlink:hover,
-#guides #nexttolinkcontainer:hover,
-#guides #done:hover {
-  background-color: white;
-  color: black;
-}
-#guides #addlink {
-  left: calc(50% + 460px);
-  top: 635px;
-  width: 400px;
-}
-#guides #addlink-responsive {
-  left: calc(50% + 190px);
-  top: 550px;
-  width: 300px;
-  height: 100px;
-}
-#guides #addlink-responsive i {
-  animation: handanimationtodown 1s infinite;
-}
-#guides #edittitle {
-  left: calc(50% + 440px);
-  top: 715px;
-  height: 50px;
-}
-@keyframes handanimationtoright {
-  0% {
-    margin-right: 20px;
-  }
-  100% {
-    margin-right: 0;
-  }
-}
-#guides #edittitle-responsive {
-  left: calc(50% + 170px);
-  top: 715px;
-  height: 50px;
-}
-#guides #edittitle-responsive i {
-  margin-left: 20px;
-  animation: handanimationtoright 1s infinite;
-}
-#guides #editlink {
-  left: calc(50% + 440px);
-  top: 770px;
-  height: 45px;
-}
-#guides #editlink-responsive {
-  left: calc(50% + 170px);
-  top: 765px;
-  height: 45px;
-}
-#guides #editlink-responsive i {
-  margin-left: 20px;
-  animation: handanimationtoright 1s infinite;
-}
-@keyframes handanimationtodown {
-  0% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: 10px;
-  }
-}
-#guides #preview {
-  top: 220px;
-  height: 100px;
-}
-#guides #preview i {
-  animation: handanimationtodown 1s infinite;
-}
-
 .parent {
   position: relative;
   width: 120px;
@@ -874,210 +616,45 @@ button:hover {
   cursor: pointer;
 }
 
-@media (min-height: 820px) {
-  .content .show {
-    top: 290px;
-  }
+.content-userinfo {
+  position: relative;
 }
-@media (max-height: 819px) {
-  .content .show {
-    position: absolute;
-  }
+.content-userinfo .control {
+  position: sticky;
+  bottom: 0;
+  background-color: #0091ff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  color: white;
+  z-index: 3;
 }
-@media (max-width: 1500px) {
-  .content .show {
-    left: 12%;
-  }
+.content-userinfo .control div {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid white;
+  cursor: pointer;
 }
-@media (max-width: 1200px) {
-  .content .show {
-    left: 8%;
-  }
+.content-userinfo .control div:hover {
+  background-color: rgb(134, 194, 255);
+  transition: 0.2s;
 }
-@media (max-width: 1100px) {
-  #guides #edittitle-responsive,
-  #guides #editlink-responsive {
-    left: calc(50% + 130px);
-  }
-  .content .show {
-    left: 5%;
-  }
+.content-userinfo .control div:first-of-type {
+  border-left: 1px solid white;
 }
-@media (max-width: 991px) {
-  .content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    margin-top: 50px;
-  }
-  .content .show {
-    position: relative;
-    max-width: 300px;
-    transform: translate(0);
-    left: 0;
-    top: 0;
-    margin: auto;
-    order: 0;
-  }
-  .content .contentwrap {
-    margin: auto;
-    order: 1;
-    max-width: 100%;
-  }
-  .content .contentwrap .login-container .login-wrap {
-    max-width: 600px;
-  }
-  .menu-control {
-    position: relative;
-    display: block;
-    text-align: center;
-  }
-  .menu-control .left,
-  .menu-control .center {
-    display: none;
-  }
-  .menu-control .right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .menu-control .right i {
-    flex: 1;
-    margin: auto;
-  }
+.content-userinfo .control div i {
+  font-size: 30px;
 }
-@media (max-width: 580px) {
-  #container-showlink .link .linkinput i {
-    right: 20px;
+
+@media screen and (max-width: 600px) {
+  .content-userinfo .control div {
+    padding: 8px;
   }
-}
-@media (max-width: 700px) {
-  .content .contentwrap {
-    margin-bottom: 30px;
-  }
-  .content .contentwrap .login-container {
-    padding: 0 20px;
-  }
-  .content .contentwrap .login-container .login-wrap {
-    max-width: 100%;
-    padding: 30px;
-  }
-  #container-showlink .link .yesno {
-    right: -47px;
-  }
-}
-@media (max-width: 500px) {
-  #container-showlink {
-    padding: 10px;
-  }
-  #container-showlink .link {
-    flex-direction: column;
-    row-gap: 15px;
-    justify-content: center;
-    align-items: center;
-  }
-  #container-showlink .link .linklogo {
-    position: absolute;
-    right: 5%;
-    bottom: 10px;
-  }
-  #container-showlink .link .linklogo img {
-    width: 25px;
-    height: 25px;
-  }
-  #container-showlink .link .linkinput {
-    width: 100%;
-  }
-  #container-showlink .link .linkinput i {
-    right: 10px;
-  }
-  #container-showlink .link .linkinput .linknametitle-wrap #linknametitle {
-    font-size: 16px;
-  }
-  #container-showlink .link .linkinput .linknametitle-wrap #title {
-    font-size: 16px;
-  }
-  #container-showlink .link .linkinput #link {
-    font-size: 14px;
-  }
-  .menu-control .right .nav-icon i {
-    margin-top: 0;
-    font-size: 27px;
-  }
-  .content .contentwrap .login-container .login-wrap .login-form .name,
-  .content .contentwrap .login-container .login-wrap .login-form .bio {
-    display: flex;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-  }
-}
-@media (max-width: 390px) {
-  #container-showlink .link .linkinput {
-    width: 100%;
-  }
-  #container-showlink .link .linkinput .linknametitle-wrap #linknametitle {
-    display: none;
-  }
-  #container-showlink .link .linkinput input {
-    width: 85%;
-  }
-  #container-showlink .link .linkinput i {
-    right: 0;
-  }
-  #container-showlink .link .linklogo {
-    right: 6%;
-  }
-  .toast-container-res {
-    width: 290px;
-  }
-}
-@media (max-width: 320px) {
-  .toast-container-res {
-    width: 260px;
-  }
-}
-@media (max-width: 300px) {
-  #container-showlink .link .linkinput {
-    width: 100%;
-  }
-  #container-showlink .link .linkinput input {
-    width: 100%;
-  }
-  #container-showlink .link .linkinput input:first-of-type {
-    font-size: 15px;
-  }
-  #container-showlink .link .linkinput input:last-of-type {
-    font-size: 12px;
-  }
-  #container-showlink .link .linkinput h5 {
-    font-size: 15px;
-  }
-  .content {
-    margin-top: 0;
-  }
-  .content .show {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .content .show .wrap {
-    width: 200px;
-    margin: auto;
-  }
-  .logo {
-    margin-top: 40px;
-  }
-  .logo img {
-    width: 150px;
-    height: 50px;
-  }
-  #show-card-id,
-  #show-change-theme,
-  #show-contact {
-    margin-top: 0;
-    margin-bottom: 100px;
-  }
-  #show-change-theme {
-    height: 200px;
+  .content-userinfo .control div i {
+    font-size: 18px;
   }
 }

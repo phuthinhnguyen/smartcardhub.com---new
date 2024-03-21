@@ -18,6 +18,7 @@ body,
 html {
   font-family: "Afacad";
   padding: 0 10%;
+  background-color: #0091ff;
 }
 body ::-webkit-scrollbar,
 html ::-webkit-scrollbar {
@@ -59,6 +60,10 @@ button:hover {
   margin: auto;
   display: flex;
   flex-direction: column;
+  border: 8px solid #0091ff;
+  border-top: none;
+  border-bottom: none;
+  background-color: white;
 }
 .content-show .cover {
   position: relative;
@@ -115,6 +120,9 @@ button:hover {
   color: white;
   padding: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .content-show .cover #linkcontainer a img {
   width: 100%;
@@ -292,8 +300,7 @@ button:hover {
   transition: 0.6s;
   margin-left: -40px;
 }
-
-footer {
+.content-show footer {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -302,18 +309,19 @@ footer {
   margin-top: 50px;
   margin-bottom: 5px;
 }
-footer img {
-  width: 210px;
-  height: 40px;
+.content-show footer img {
+  width: 150px;
+  height: 30px;
 }
-footer p {
+.content-show footer p {
   color: #0091ff;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
 @media screen and (max-width: 1400px) {
-  body, html {
+  body,
+  html {
     padding: 0;
   }
 }
@@ -341,8 +349,14 @@ footer p {
     width: 40px;
     height: 40px;
   }
+  .content-show .info .action button {
+    height: 35px;
+  }
   .content-show .info .paragraph {
     padding: 0 30px;
+  }
+  footer {
+    background-color: white;
   }
   footer img {
     width: 150px;
@@ -355,10 +369,5 @@ footer p {
 @media screen and (max-width: 500px) {
   .content-show {
     width: 100%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .content-show .action button {
-    max-width: 120px;
   }
 }

@@ -1,0 +1,401 @@
+<div id="body">
+    <!-- nav -->
+    <div class="menu-control">
+        <div class="left">
+
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <div class="nav-icon">
+                <i class="fas fa-user" id="cardid-icon"></i><span class="tooltiptext" lang="en">Card</span>
+                <span class="tooltiptext" lang="vi">Thẻ</span>
+            </div>
+            <div class="nav-icon">
+                <i class="fa fa-envelope" id="contact-icon"></i><span class="tooltiptext" lang="en">Contact</span>
+                <span class="tooltiptext" lang="vi">Liên hệ</span>
+            </div>
+            <div class="nav-icon">
+                <i class="far fa-images" id="change-theme-icon"></i><span class="tooltiptext" lang="en">Theme</span>
+                <span class="tooltiptext" lang="vi">Theme</span>
+            </div>
+            <div class="nav-icon">
+                <i onclick="window.location.href='/logout'" class="fas fa-sign-out-alt"></i><span
+                    class="tooltiptext" lang="en">Log out</span>
+                <span class="tooltiptext" lang="vi">Thoát</span>
+            </div>
+        </div>
+    </div>
+    <div id="show-card-id">
+        <div class="showcardid-wrap">
+            <div class="showcardid-item">
+                <h2 lang="en">Card ID</h2>
+                <h2 lang="vi">ID Thẻ</h2>
+                <p>
+                    <%= datauser.cardid %>
+                </p>
+            </div>
+            <div class="showcardid-item">
+                <h2 lang="en">Phone</h2>
+                <h2 lang="vi">Điện thoại</h2>
+                <input type="tel" value="<%= datauser.phone %>" size="15" id="showcardid-phone" onchange="changephone()">
+            </div>
+            <div class="showcardid-item">
+                <h2 lang="en">E-mail</h2>
+                <h2 lang="vi">E-mail</h2>
+                <input type="text" value="<%= datauser.email %>" size="40" id="showcardid-email" onchange="changeemail()">
+            </div>
+            <div class="showcardid-item">
+                <h2 lang="en">Change password</h2>
+                <h2 lang="vi">Đổi mật khẩu</h2>
+                <input type="text" value="" size="40" id="showcardid-password" onchange="changepassword()">
+            </div>
+        </div>
+    </div>
+    <div id="show-contact">
+        <h2 lang="en">Contact information</h2>
+        <h2 lang="vi">Thông tin liên hệ</h2>
+        <p lang="en">We love to hear from you on our customer service, merchandise, website or any topics you want
+            to share with us. Your comments and suggestions will be appreciated. Please refer to the information below:</p>
+        <p lang="vi"><strong>SMARTCARD</strong> rất hân hạnh nhận được góp ý từ các bạn. Vui lòng theo dõi thông tin liên hệ bên
+            dưới:</p>
+        <p lang="en">smartcardhub.com</p>
+        <p lang="vi">smartcardhub.com</p>
+        <p lang="en">Mobile/Zalo: 0902 22 59 74</p>
+        <p lang="vi">Di động/Zalo: 0902 22 59 74</p>
+        <p lang="en">contact@smartcardhub.com</p>
+        <p lang="vi">contact@smartcardhub.com</p>
+        <p lang="en">Everyday 8:00-19:00</p>
+        <p lang="vi">Mỗi ngày từ 8:00-19:00</p>
+    </div>
+    <div id="show-change-theme">
+        <h2 lang="en">Change theme color</h2>
+        <h2 lang="vi">Đổi màu nền</h2>
+        <div class="item-bottom">
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)"
+                        style="background-color: dodgerblue;"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span lnag="en">Default</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color: #90A87B"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Green</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#E4E0D4"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Beige</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#8DB5D1"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Light Blue</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#143F66"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Dark Blue</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#C6AFC4"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Light Purple</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#836A53"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Brown</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:black"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Black</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:grey"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Grey</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:#EADED9"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Light Pink</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:rgb(31, 53, 252)"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Blue</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:darkgoldenrod"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Dark Yellow</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="item-bottom-color">
+                <div class="color">
+                    <a onclick="changecolortheme(this)" style="background-color:rgb(143, 103, 43)"></a>
+                </div>
+                <div class="tooltip-text">
+                    <span>Dark Brown</span><i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- content -->
+    <div class="content">
+        <div class="contentwrap" id="contentwrap">
+            <div class="login-container">
+                <div class="login-wrap">
+                    <form class="login-form validate-form" method="post"
+                        action="/<%= datauser.cardid %>/userinfo" enctype="multipart/form-data">
+                        <div class="parent">
+                            <div>
+                                <img alt="..." src="<%= datauser.avatar %>" id="avatarshow" />
+                            </div>
+                            <div class="file-upload">
+                                <input type="file" id="profile_pic" name="profile_pic"
+                                    onchange="changeavatar()"></input>
+                            </div>
+                        </div>
+                        <script>
+                            const toBase64 = file => new Promise((resolve, reject) => {
+                                const reader = new FileReader();
+                                reader.readAsDataURL(file);
+                                reader.onload = () => resolve(reader.result);
+                                reader.onerror = reject;
+                            });
+                            async function changeavatar() {
+                                let file = document.getElementById("profile_pic").files[0]
+                                let avatarshow = document.getElementById("avatarshow")
+                                const base64 = await toBase64(file);
+                                avatarshow.src = base64;
+                            }
+                        </script>
+                        <input type="hidden" value="<%= datauser.phone %>" size="15" name="phone" id="phone">
+                        <input type="hidden" value="<%= datauser.email %>" size="40" name="email" id="email">
+                        <input type="hidden" value="" size="40" name="password" id="password">
+                        <input name="colortheme" type="hidden" id="colortheme" value="<%= datauser.colortheme %>"></input>
+                        <input name="train" type="hidden" value="<%= datauser.train %>" id="train"></input>
+                        <div class="name">
+                            <input id="name" readonly="true" value="<%= datauser.name2 %>" name="name2"
+                                maxlength="30" onfocusout="inputnamefocusout(this)" onkeyup="inputKeyUp(event,this)"
+                                onkeypress="return event.keyCode != 13;" />
+                            <i class="fas fa-pencil" onclick="editname(this)"></i>
+                        </div>
+                        <div class="bio" style="margin-top: 5px">
+                            <input id="bio" readonly="true" value="<%= datauser.bio %>" name="bio"
+                                maxlength="40" onfocusout="inputbiofocusout(this)" onkeyup="inputKeyUp(event,this)"
+                                onkeypress="return event.keyCode != 13;" style="font-size: 18px;font-weight: 400;"/>
+                            <i class="fas fa-pencil" onclick="editbio(this)"></i>
+                        </div>
+                        <div class="" id="addlink-btn">
+                            <div class="">
+                                <div class="addlinkbtn" lang="en">
+                                    <i class="far fa-plus"></i>Add link
+                                </div>
+                                <div class="addlinkbtn" lang="vi">
+                                    <i class="far fa-plus"></i>Tạo link
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link-option" tabindex="-1">
+                            <a onclick="addlinkfunction(this)">Facebook</a>
+                            <a onclick="addlinkfunction(this)">Youtube</a>
+                            <a onclick="addlinkfunction(this)">Instagram</a>
+                            <a onclick="addlinkfunction(this)">TikTok</a>
+                            <a onclick="addlinkfunction(this)">Zalo</a>
+                            <a onclick="addlinkfunction(this)">Telegram</a>
+                            <a onclick="addlinkfunction(this)">Skype</a>
+                            <a onclick="addlinkfunction(this)">Twitter</a>
+                            <a onclick="addlinkfunction(this)">Pinterest</a>
+                            <a onclick="addlinkfunction(this)">Momo</a>
+                            <a onclick="addlinkfunction(this)">Gmail</a>
+                            <a onclick="addlinkfunction(this)">LinkedIn</a>
+                            <a onclick="addlinkfunction(this)">WhatsApp</a>
+                            <a onclick="addlinkfunction(this)">Yelp</a>
+                        </div>
+                        <div id="link-area">
+                            <% if (datauser.link!="" ) { %>
+                                <% for(let i=0; i < datauser.link.linktype.length; i++) { %>
+                                    <div id="container-showlink">
+                                        <input name="linktype" type="hidden"
+                                            value="<%= datauser.link.linktype[i] %>"></input>
+                                        <div class="link">
+                                            <div class="linklogo">
+                                                <!-- <img
+                                                    src="/image/userinfo/<%= datauser.link.linktype[i].toLowerCase() %>.png"> -->
+                                                    <img
+                                                    src="" alt="">
+                                            </div>
+                                            <div class="linkinput">
+                                                <div class="linknametitle-wrap">
+                                                    <h5 id="linknametitle">
+                                                        <%= datauser.link.linktype[i] %>&nbsp;-&nbsp;
+                                                    </h5>
+                                                    <input id="title" name="inputtitle" class="inputtitle"
+                                                        readonly="true" value="<%= datauser.link.inputtitle[i] %>"
+                                                        maxlength="40" size="18"
+                                                        onfocusout="inputtitlefocusout(this)"
+                                                        onkeyup="inputKeyUp(event,this)"
+                                                        onkeypress="return event.keyCode != 13;"></input>
+                                                </div>
+                                                <i class="fas fa-pencil" onclick="editinputtitle(this)"></i>
+                                                <input id="link" name="inputlink" readonly="true"
+                                                    value="<%= datauser.link.inputlink[i] %>" maxlength="100"
+                                                    size="39" onfocusout="inputlinkfocusout(this)"
+                                                    onkeyup="inputKeyUp(event,this)"
+                                                    onkeypress="return event.keyCode != 13;"></input>
+                                                <i class="fas fa-pencil" onclick="editinputlink(this)"></i>
+                                            </div>
+                                            <div class="linktrash">
+                                                <i class="fas fa-trash" onclick="clicktrash(this)"></i>
+                                            </div>
+                                            <div class="yesno">
+                                                <i class="fas fa-check" id="yes" onclick="removelink(this)"></i>
+                                                <i class="fas fa-times" id="no" onclick="clickno(this)"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                        <% } %>
+                        </div>
+
+                        <!-- <div id="container-showlink">
+                            <input name="linktype" value="${a.innerText}"></input>
+                            <div class="link">
+                                <div class="linklogo">
+                                    <img src="/image/userinfo/${a.innerText.toLowerCase()}.png">
+                                </div>
+                                <div class="linkinput">
+                                    <div class="linknametitle-wrap">
+                                        <h5 id="linknametitle">${a.innerText}&nbsp;-&nbsp;</h5>
+                                        <input id="title"
+                                            name="inputtitle" class="inputtitle" readonly="true"
+                                            value="${(name.value==" @yourname") ? "@yourtitle" : name.value}"
+                                            maxlength="40" size="18" onfocusout="inputtitlefocusout(this)"
+                                            onkeyup="inputKeyUp(event,this)"></input>
+                                    </div>
+                                    <i class="fas fa-pencil" onclick="editinputtitle(this)"></i>
+                                    <input
+                                        id="link" name="inputlink" readonly="true"
+                                        value="http://${a.innerText.toLowerCase()}.com/@yourlink" maxlength="100"
+                                        size="39" onfocusout="inputlinkfocusout(this)"
+                                        onkeyup="inputKeyUp(event,this)"></input>
+                                        <i class="fas fa-pencil" onclick="editinputlink(this)"></i>
+                                </div>
+                                <div class="linktrash">
+                                    <i class="fas fa-trash" onclick="clicktrash(this)"></i>
+                                </div>
+                                <div class="yesno">
+                                    <i class="fas fa-check" id="yes" onclick="removelink(this)"></i>
+                                    <i class="fas fa-times" id="no" onclick="clickno(this)"></i>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="">
+                            <div class="">
+                                <button class="addlinkbtn" type="submit" lang="en">
+                                    Save
+                                </button>
+                                <button class="addlinkbtn" type="submit" lang="vi">
+                                    Lưu
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="show" id="show">
+            <div class="wrap" id="wrap" style="background-color: <%= datauser.colortheme %>;">
+                <div class="avatar">
+                    <img id="show-avatar" src="<%= datauser.avatar %>" />
+                </div>
+                <div class="showname">
+                    <p id="name-show">
+                        <%= datauser.name2 %>
+                    </p>
+                </div>
+                <p class="showbio" id="bio-show"><%= datauser.bio %></p>
+                <div class="action">
+                    <button onclick="call()">
+                        <i class="fa fa-phone"></i>
+                    </button>
+                    <button onclick="email()"><i class="fa fa-envelope"></i></button>
+                </div>
+                <script>
+                    $(".action")
+                        .children("button")
+                        .css({ color: document.body.style.color });
+                    function call() {
+                        const phoneNumber = "";
+                        window.location.href = `tel:${phoneNumber}`;
+                    }
+                    function email() {
+                        const email = "";
+                        window.location.href = `mailto:${email}`;
+                    }
+                </script>
+                <div id="link-container">
+                    <% if (datauser.link!="" ) { %>
+                        <% for(let i=0; i < datauser.link.linktype.length; i++) { %>
+                            <a class="link" href='<%= datauser.link.inputlink[i] %>' target="_blank">
+                                <!-- <img src="/image/userinfo/<%= datauser.link.linktype[i].toLowerCase() %>.png"
+                                    alt="" /> -->
+                                <img src=""
+                                    alt="" />
+                                <p>
+                                    <%= datauser.link.inputtitle[i] %>
+                                </p>
+                            </a>
+                            <% } %>
+                                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

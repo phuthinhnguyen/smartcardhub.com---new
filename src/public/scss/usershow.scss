@@ -14,6 +14,7 @@ html {
   @include font($fontAfacad);
   @include scrollbar(5px, transparent, black, black);
   padding: 0 10%;
+  background-color: $text-color;
 }
 
 input {
@@ -42,13 +43,19 @@ button {
   margin: auto;
   display: flex;
   flex-direction: column;
+  border: 8px solid $text-color;
+  border-top: none;
+  border-bottom: none;
+  background-color: $button-background-hover;
   .cover {
     position: relative;
+
     img {
       width: 100%;
       height: auto;
       max-height: 600px;
     }
+
     .avatar {
       width: 200px;
       height: 200px;
@@ -57,36 +64,41 @@ button {
       position: absolute;
       bottom: -80px;
       left: 50%;
-      transform: translate( -50%, 0 );
+      transform: translate(-50%, 0);
       z-index: 1;
+
       img {
         width: 100%;
         height: 100%;
       }
     }
-    #linkcontainer{
+
+    #linkcontainer {
+
       @keyframes linkcontaineranimation {
         from {
           rotate: (8deg);
           opacity: 0;
         }
-      
+
         to {
           rotate: 0;
           opacity: 1;
         }
       }
+
       display: none;
       position: absolute;
       width: 350px;
       height: 350px;
       bottom: -155px;
       left: 50%;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
       // background-color: $text-color;
       border-radius: 50%;
       animation: linkcontaineranimation 0.8s;
-      a{
+
+      a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,87 +109,102 @@ button {
         color: white;
         padding: 8px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        img{
+        user-select: none;
+        img {
           width: 100%;
           height: auto;
         }
-        &:hover{
+
+        &:hover {
           background-color: rgb(175, 175, 175);
         }
       }
-      .a1{
+
+      .a1 {
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
       }
-      .a2{
+
+      .a2 {
         position: absolute;
         top: 9%;
         left: 64%;
-       
+
       }
-      .a3{
+
+      .a3 {
         position: absolute;
         top: 24%;
         left: 79%;
       }
-      .a4{
+
+      .a4 {
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
       }
-      .a5{
+
+      .a5 {
         position: absolute;
         bottom: 24%;
         left: 79%;
       }
-      .a6{
+
+      .a6 {
         position: absolute;
         bottom: 9%;
         left: 64%;
       }
-      .a7{
+
+      .a7 {
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
       }
-      .a8{
+
+      .a8 {
         position: absolute;
         right: 64%;
         bottom: 9%;
       }
-      .a9{
+
+      .a9 {
         position: absolute;
         right: 79%;
         bottom: 24%;
       }
-      .a10{
+
+      .a10 {
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
       }
-      .a11{
+
+      .a11 {
         position: absolute;
         top: 24%;
         right: 79%;
       }
-      .a12{
+
+      .a12 {
         position: absolute;
         top: 9%;
         right: 64%;
       }
     }
   }
- 
+
   .info {
     margin-top: 70px;
+
     .name {
       margin-top: 30px;
-  
+
       p {
         @include font($fontAfacad);
         font-weight: 500;
@@ -187,14 +214,14 @@ button {
         color: $text-color;
       }
     }
-  
+
     .bio {
       font-size: 18px;
       text-align: center;
       color: gray;
       text-transform: capitalize;
     }
-  
+
     .action {
       margin: auto;
       margin-top: 40px;
@@ -204,7 +231,7 @@ button {
       align-items: center;
       column-gap: 40px;
       color: inherit;
-  
+
       button {
         width: 50%;
         max-width: 200px;
@@ -219,33 +246,38 @@ button {
 
         &:hover {
           background-color: $button-background-hover;
-          border: 2px solid $text-color;  
+          border: 2px solid $text-color;
           color: $text-color;
           font-weight: 500;
-          transition: 0.3s;;
+          transition: 0.3s;
+          ;
         }
       }
     }
-    .paragraph{
+
+    .paragraph {
       margin-top: 40px;
       padding: 0 80px;
-      p{
+
+      p {
         color: gray;
         text-align: justify;
         @include font($fontAfacad);
         font-size: 20px;
-        &:last-of-type{
+
+        &:last-of-type {
           margin-top: 10px;
         }
       }
     }
+
     .link {
       max-width: 800px;
       width: 100%;
       padding: 25px;
       margin-bottom: 40px;
       padding-top: 0;
-  
+
       .wrap {
         width: 100%;
         border: 1px solid white;
@@ -259,22 +291,22 @@ button {
         column-gap: 5px;
         transition: 0.6s;
         margin-top: 30px;
-  
+
         &:hover {
           background-color: white;
-  
+
           p {
             color: black;
           }
         }
-  
+
         img {
           width: 45px;
           height: 45px;
           border-radius: 50%;
           margin-left: 5px;
         }
-  
+
         p {
           width: 100%;
           text-align: center;
@@ -286,97 +318,107 @@ button {
       }
     }
   }
-  }
-
-
-// CSS footer
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 5px;
-  img {
-    width: 210px;
-    height: 40px;
-  }
-  p{
-    color: $text-color;
-    font-size: 20px;
-    margin-top: 10px;
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 5px;
+  
+    img {
+      width: 150px;
+      height: 30px;
+    }
+  
+    p {
+      color: $text-color;
+      font-size: 15px;
+      margin-top: 10px;
+    }
   }
 }
+
+
+
+
+
 @media screen and (max-width:1400px) {
-  body,html{
+
+  body,
+  html {
     padding: 0;
   }
 }
 
 @media screen and (max-width:1200px) {
-  .content-show{
-    .cover{
-      img{
+  .content-show {
+    .cover {
+      img {
         max-height: 500px;
       }
     }
   }
 }
+
 @media screen and (max-width:800px) {
-  .content-show{
-    .cover{
-      img{
+  .content-show {
+    .cover {
+      img {
         max-height: 400px;
       }
     }
   }
 }
+
 @media screen and (max-width:600px) {
-  .content-show{
-    .cover{
-      .avatar{
+  .content-show {
+    .cover {
+      .avatar {
         width: 150px;
         height: 150px;
       }
-      #linkcontainer{
+
+      #linkcontainer {
         width: 280px;
         height: 280px;
         bottom: -140px;
-        a{
+
+        a {
           width: 40px;
           height: 40px;
         }
       }
     }
-    .info{
-      .paragraph{
+    .info {
+      .action{
+        button{
+          height: 35px;
+        }
+      }
+      .paragraph {
         padding: 0 30px;
       }
     }
   }
-  footer{
-    img{
+
+  footer {
+    background-color: $button-background-hover;
+    img {
       width: 150px;
       height: 30px;
     }
-    p{
+
+    p {
       font-size: 15px;
     }
   }
 }
+
 @media screen and (max-width:500px) {
   .content-show {
     width: 100%;
   }
 }
 
-@media screen and (max-width:350px) {
-  .content-show {
-    .action {
-      button {
-        max-width: 120px;
-      }
-    }
-  }
-}

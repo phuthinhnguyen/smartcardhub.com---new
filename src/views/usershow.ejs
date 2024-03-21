@@ -14,7 +14,7 @@
 </head>
 
 <!-- <body style="<%= datauser.colortheme %>" id="color"> -->
-<body id="color">
+<body>
 	<div class="content-show">
 		<div class="cover">
 			<img src="/image/index/signin1.jpg" alt="" />
@@ -41,7 +41,16 @@
 			function avatarclick(){
 				linkcontainer.style.display = "block"
 			}
-			
+			$(document).mouseup(function(e) 
+				{
+					var container = $("#linkcontainer");
+
+					// if the target of the click isn't the container nor a descendant of the container
+					if (!container.is(e.target) && container.has(e.target).length === 0) 
+					{
+						container.fadeOut(300);
+					}
+				});
 		</script>
 		<div class="info">
 			<div class="name">
@@ -59,9 +68,6 @@
 				<button onclick="email()"><i class="fa fa-envelope fa-2x"></i></button>
 			</div>
 			<script>
-				$(".action")
-					.children("button")
-					.css({ color: document.body.style.color });
 				function call() {
 					const phoneNumber = "<%= datauser.phone %>";
 					window.location.href = `tel:${phoneNumber}`;
@@ -116,12 +122,12 @@
 								</script>
 			</div>
 		</div>
-		
+		<footer>
+			<img src="/image/index/logo.png" alt="" />
+			<p>Copyright © 2024 · All Rights Reserved ·</p>
+		</footer>
 	</div>
-	<footer>
-		<img src="/image/index/logo.png" alt="" />
-		<p>Copyright © 2024 · All Rights Reserved ·</p>
-	</footer>
+	
 </body>
 
 </html>
