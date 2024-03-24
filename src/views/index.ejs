@@ -19,131 +19,157 @@
 
 <body>
 
-	<!-- main -->
-	<div class="wrapper" id="wrapper">
-		<nav>
-			<div class="nav-wrap">
-				<div class="left">
-					<ul>
-						<li>
-							<a lang="en" id="home-en">Home</a>
-							<a lang="vi" id="home-vi">Trang chủ</a>
-						</li>
-		
-						<li>
-							<a lang="en" id="about-en">About</a>
-							<a lang="vi" id="about-vi">Về SMARTCARD</a>
-						</li>
-		
-						<li>
-							<a lang="en" id="products-en">Products</a>
-							<a lang="vi" id="products-vi">Sản phẩm</a>
-						</li>
-						<li>
-							<a lang="en" id="userguides-en">User guides</a>
-							<a lang="vi" id="userguides-vi">Hướng dẫn</a>
-						</li>
-						<li>
-							<a lang="en" id="reviews-en">Reviews</a>
-							<a lang="vi" id="reviews-vi">Đánh giá</a>
-						</li>
-						<li>
-							<a lang="en" id="contact-en">Contact</a>
-							<a lang="vi" id="contact-vi">Liên hệ</a>
-						</li>
-					</ul>
-				</div>
-			
-				<div class="right">
-				   <a lang="en" href="/signin">Log in</a>
-				   <a lang="vi" href="/signin">Đăng nhập</a>
-				   <img src="/image/index/vi.svg" alt="" style="width: 25px;height: 25px;margin-left: 20px;" onclick="vi()">
-				   <img src="/image/index/us.svg" alt="" onclick="eng()">
-				</div>
-			</div>
-		</nav>
-		<script>
-			$("#home-en, #home-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".home").offset().top
-				}, 600);
-			})
-			$("#about-en").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".about-en").offset().top
-				}, 600);
-			})
-			$("#about-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".about-vi").offset().top
-				}, 600);
-			})
-			$("#products-en").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".products-en").offset().top
-				}, 600);
-			})
-			$("#products-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".products-vi").offset().top
-				}, 600);
-			})
-			$("#userguides-en").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".userguides-en").offset().top
-				}, 600);
-			})
-			$("#userguides-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".userguides-vi").offset().top
-				}, 600);
-			})
-			$("#reviews-en").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".reviews-en").offset().top
-				}, 600);
-			})
-			$("#reviews-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".reviews-vi").offset().top
-				}, 600);
-			})
-			$("#contact-en").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".contact-en").offset().top
-				}, 600);
-			})
-			$("#contact-vi").click(function name(params) {
-				$('html').animate({
-					scrollTop: $(".contact-vi").offset().top
-				}, 600);
-			})
-		</script>
-
-		<!-- scrolltop -->
-		<div id="scrolltop">
-			<img src="/image/index/totop.png" alt="">
+	<!-- top -->
+	<div class="top" id="top">
+		<div class="left">
+			<!-- <img src="assets/image/index/phone.svg" alt="">
+			<p>(+84) 66 56 93 97</p> -->
+			<img src="/image/index/email.svg" alt="">
+			<p>contact@smartcardhub.com</p>
+			<img src="/image/index/zalo-top.png" alt="">
+			<p>(+84) 902 225 974</p>
 		</div>
-
-		<!-- toast -->
-		<div aria-live="polite" aria-atomic="true"
-			class="d-flex justify-content-center align-items-center toast-container-res"
-			style="position: absolute; bottom: 20px;right: 50px;">
-			<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000">
-				<div class="toast-header d-flex justify-content-between"
-					style="background-color: dodgerblue;">
-					<div>
-						<img src="/image/smartcard.ico" class="rounded mr-2" alt="..."
-							style="width:20px;height: 20px;margin-right: 5px;">
-						<strong class="mr-auto" style="color: white;">SMARTCARD</strong>
-					</div>
-					<button type="button" class="btn-close ml-2 mb-1" data-bs-dismiss="toast"></button>
-				</div>
-				<div lang="en" class="toast-body" style="color: black;">Your e-mail has been sent.</div>
-				<div lang="vi" class="toast-body" style="color: black;">Gửi thư thành công.</div>
+		<div class="right">
+			<p >Follow us</p>
+			<a href="https://www.facebook.com/hsiicvietnam"><img src="assets/image/index/facebook.svg" alt=""></a>
+		</div>
+	</div> 
+	<nav class="container-fluid">
+		<div class="row">
+			<div class="left">
+				<img src="/image/index/logo.png" alt="logo">
+			</div>  
+			<div class="center">
+				<ul>
+					<li>
+						<a href="index.html" id="menu-home"><h6 >Home</h6></a>
+					</li>
+					<li>
+						<a href="index.html#aboutus" id="menu-aboutus"><h6 >About us</h6></a>
+					</li>
+					<li>
+						<a href="index.html#services" id="menu-service"><h6 >Services
+						</h6></a>
+					</li>
+					<li>
+						<a href="index.html#reviews" id="menu-gallery" ><h6>Reviews</h6></a>
+					</li>
+					<li>
+						<a href="index.html#clients" id="menu-news"><h6 >Clients</h6></a>
+					</li>
+					<li>
+						<a href="index.html#contact" id="menu-contact"><h6 >Contact</h6></a>
+					</li>
+				</ul>
 			</div>
+			<div class="col-4 menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">
+				<a class="bar"><img src="/image/index/bar.svg" alt=""></a>
+			</div>
+			<div class="offcanvas offcanvas-start offcanvas-change" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+				<div class="offcanvas-header">
+					<img src="/image/index/logo.png" alt="">
+					<div data-bs-dismiss="offcanvas"><img src="/image/index/cheveron-right.svg" alt=""></div>
+				</div>
+				<div class="offcanvas-header-bottom">
+					<a href="index.html" id="menu-home"><h5 >Home</h5></a>
+					<a href="index.html#aboutus" id="menu-aboutus"><h5 >About us</h5></a>
+					<a href="index.html#services" id="menu-service"><h5 >Services</h5></a>
+					<a href="index.html#reviews" id="menu-gallery"><h5 >Reviews</h5></a>
+					<a href="index.html#clients" id="menu-news"><h5 >Clients</h5></a>
+					<a href="index.html#contact" id="menu-contact"><h5 >Contact</h5></a>
+				</div>
+			</div>
+		</div>
+	</nav> 
+
+	<!-- img -->
+	<div class="img">
+	<div class="img-nav">
+		<a href="javascript:currentSlide(0)" class="img-nav-button"></a>
+		<a href="javascript:currentSlide(1)" class="img-nav-button"></a>
+		<a href="javascript:currentSlide(2)" class="img-nav-button"></a>
+	</div>
+	<div class="img-wrap">
+		<img src="/image/index/banner1.jpg" alt="">
+		<div class="img-text">
+			<p>H.S International Investment and Consulting Company</p>
+			<div class="img-text-h1">
+				<h1>Company</h1><h1>registration</h1><h1>in Vietnam</h1>
+			</div>
+			<!-- <a href="">See more</a> -->
+		</div>
+		<div class="img-text-recotton">
+			<!-- <p>H.S Company &nbsp;|</p><a href="">See more</a> -->
+			<p>H.S &nbsp;| Welcome to us !</p>
 		</div>
 	</div>
+	<div class="img-wrap">
+		<img src="/image/index/banner2.jpg" alt="">
+		<div class="img-text">
+			<p>H.S International Investment and Consulting Company</p>
+			<div class="img-text-h1">
+				<h1>Long terms</h1><h1>visa service</h1><h1>for investors</h1>
+			</div>
+			<!-- <a href="">See more</a> -->
+		</div>
+		<div class="img-text-recotton">
+			<!-- <p>H.S Company &nbsp;|</p><a href="">See more</a> -->
+			<p>H.S &nbsp;| Welcome to us !</p>
+		</div>
+	</div>
+	<div class="img-wrap">
+		<img src="/image/index/signin2.png" alt="">
+		<div class="img-text">
+			<p>H.S International Investment and Consulting Company</p>
+			<div class="img-text-h1">
+				<h1>Tax and</h1><h1>Accounting</h1><h1>Service</h1>
+			</div>
+			<!-- <a href="">See more</a> -->
+		</div>
+		<div class="img-text-recotton">
+			<!-- <p>H.S Company &nbsp;|</p><a href="">See more</a> -->
+			<p>H.S &nbsp;| Welcome to us !</p>
+		</div>
+	</div>
+	</div>
+    <script>
+        let imgslide = document.getElementsByClassName("img-wrap");
+        let imgnav = document.getElementsByClassName("img-nav-button");
+        let index=1;
+        for (let i=0;i<imgslide.length;i++){
+                imgslide[i].style.display="none";
+            }
+        imgslide[0].style.display="block";
+        imgnav[0].style.backgroundColor  = "white";
+        imgnav[0].style.border  = "1px solid black";
+
+        function slide(){
+            for (let i=0;i<imgslide.length;i++){
+                imgslide[i].style.display="none";
+                imgnav[i].style.backgroundColor  = "black";
+            }
+            imgslide[index].style.display="block";
+            imgnav[index].style.backgroundColor="white";
+            imgnav[index].style.border  = "1px solid black";
+        
+            if (index==imgslide.length-1){
+                index=0;
+            }
+            else index++;
+        }
+        function currentSlide(currentindex){
+            for (let i=0;i<imgslide.length;i++){
+                imgslide[i].style.display="none";
+                imgnav[i].style.backgroundColor  = "black";
+            }
+            index=currentindex;
+            imgslide[index].style.display="block";
+            imgnav[index].style.backgroundColor="white";
+            imgnav[index].style.border  = "1px solid black";
+        
+        }
+        setInterval(slide,5000); 
+    </script>
 
 
 	<!-- #scroll to top -->

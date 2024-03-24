@@ -14,7 +14,7 @@ html {
   @include font($fontAfacad);
   @include scrollbar(5px, transparent, black, black);
   padding: 0 10%;
-  background-color: $text-color;
+  // background-color: $text-color;
 }
 
 input {
@@ -43,10 +43,9 @@ button {
   margin: auto;
   display: flex;
   flex-direction: column;
-  border: 8px solid $text-color;
-  border-top: none;
-  border-bottom: none;
   background-color: $button-background-hover;
+  box-shadow: 0 24px 38px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+
   .cover {
     position: relative;
 
@@ -110,6 +109,7 @@ button {
         padding: 8px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         user-select: none;
+
         img {
           width: 100%;
           height: auto;
@@ -318,6 +318,7 @@ button {
       }
     }
   }
+
   footer {
     width: 100%;
     display: flex;
@@ -326,12 +327,12 @@ button {
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 5px;
-  
+
     img {
       width: 150px;
       height: 30px;
     }
-  
+
     p {
       color: $text-color;
       font-size: 15px;
@@ -354,6 +355,10 @@ button {
 
 @media screen and (max-width:1200px) {
   .content-show {
+    border: 8px solid $text-color;
+    border-top: none;
+    border-bottom: none;
+
     .cover {
       img {
         max-height: 500px;
@@ -374,6 +379,7 @@ button {
 
 @media screen and (max-width:600px) {
   .content-show {
+
     .cover {
       .avatar {
         width: 150px;
@@ -391,12 +397,14 @@ button {
         }
       }
     }
+
     .info {
-      .action{
-        button{
+      .action {
+        button {
           height: 35px;
         }
       }
+
       .paragraph {
         padding: 0 30px;
       }
@@ -405,6 +413,7 @@ button {
 
   footer {
     background-color: $button-background-hover;
+
     img {
       width: 150px;
       height: 30px;
@@ -421,4 +430,3 @@ button {
     width: 100%;
   }
 }
-
