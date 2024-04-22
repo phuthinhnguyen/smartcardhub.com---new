@@ -18,10 +18,10 @@
 	<div class="content-show">
 		<div class="cover">
 			<img src="/image/index/signin1.jpg" alt="" />
-			<div class="avatar" onclick="avatarclick()">
+			<div class="avatar">
 				<img src="<%= datauser.avatar %>" alt="" />
 			</div>
-			<div id="linkcontainer">
+			<!-- <div id="linkcontainer">
 				<a href="https://www.youtube.com/@thaygiaoba6325" class="a1" target="_blank"><img src="/image/index/youtube.png" alt=""></a>
 				<a href="https://www.instagram.com/thinhthinh1101/" class="a2" target="_blank"><img src="/image/index/instagram.png" alt=""></a>
 				<a href="https://join.skype.com/invite/VoNKJ75K6WKC" class="a3" target="_blank"><img src="/image/index/skype.png" alt=""></a>
@@ -34,9 +34,9 @@
 				<a href="https://www.linkedin.com/in/nguyen-phu-thinh-a0a41a11b/" class="a10" target="_blank"><img src="/image/index/linkind.png" alt=""></a>
 				<a href="https://www.tiktok.com/@orinnn_207" class="a11" target="_blank"><img src="/image/index/tiktok.png" alt=""></a>
 				<a href="http://zalo.me/0937439340" class="a12" target="_blank"><img src="/image/index/zalo.png" alt=""></a>
-			</div>
+			</div> -->
 		</div>
-		<script>
+		<!-- <script>
 			let linkcontainer = document.getElementById("linkcontainer")
 			function avatarclick(){
 				linkcontainer.style.display = "block"
@@ -51,7 +51,7 @@
 						container.fadeOut(300);
 					}
 				});
-		</script>
+		</script> -->
 		<div class="info">
 			<div class="name">
 				<p id="name">
@@ -86,40 +86,49 @@
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
 				</p>
 			</div>
-			<div class="link">
-				<% if (datauser.link!="" ) { %>
-					<% for(let i=0; i < datauser.link.linktype.length; i++) { %>
-						<div class="wrap" onclick="openlink('<%= datauser.link.linktype[i] %>','<%= datauser.link.inputlink[i] %>')">
-							<!-- <img src="image/userinfo/<%= datauser.link.linktype[i].toLowerCase() %>.png" alt="" /> -->
-							<img src="" alt="">
-							<p id="link">
-								<%= datauser.link.inputtitle[i] %>
-							</p>
+			
+		</div>
+		<div class="seemoreaboutme-wrap">
+			<h1>SEE MORE ABOUT ME</h1>
+			<div class="seemoreaboutme-img">
+				<div class="seemoreaboutme-button">
+					<div class="overlay">
+						<div>
+							<div class="playbutton"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+							<div class="playbutton" onclick="avatarclick()"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 						</div>
-						<% } %>
-							<% } %>
-								<script>
-									function openlink(linktype,link) {
-										if (linktype=="Gmail") {
-											// window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${link}`);
-											window.location.href = `mailto:${link}`
-										}
-										else if (linktype=="Zalo") {
-											window.open(`http://zalo.me/${link}`)
-											// window.location.href='zalo://chat'
-											// window.location.href= "intent://instagram.com/#Intent;scheme=http;package=com.instagram.android;end"; 		
-										}
-										else if (linktype=="WhatsApp") {
-											window.open(`https://wa.me/${link}`)
-										}
-										else if (linktype=="Momo") {
-											// window.open(`https://page.momoapp.vn/tfDDP2TENsk`)
-											window.open(`https://nhantien.momo.vn/${link}`)
-										}
-										else window.open(link);
-	
-									}
-								</script>
+					</div>
+				</div>
+				<div id="linkcontainer">
+					<a href="https://www.youtube.com/@thaygiaoba6325" class="a1" target="_blank"><img src="/image/index/youtube.png" alt=""></a>
+					<a href="https://www.instagram.com/thinhthinh1101/" class="a2" target="_blank"><img src="/image/index/instagram.png" alt=""></a>
+					<a href="https://join.skype.com/invite/VoNKJ75K6WKC" class="a3" target="_blank"><img src="/image/index/skype.png" alt=""></a>
+					<a href="https://www.facebook.com/profile.php?id=10000922319437" class="a4" target="_blank"><img src="/image/index/facebook.png" alt=""></a>
+					<a href="https://twitter.com/PhuThinhNg32979" class="a5" target="_blank"><img src="/image/index/twitter.png" alt=""></a>
+					<a href="https://nhantien.momo.vn/0912317332" class="a6" target="_blank"><img src="/image/index/momo.png" alt=""></a>
+					<a href="https://www.pinterest.com/phuthinhnguyen/" class="a7" target="_blank"><img src="/image/index/pinterest.png" alt=""></a>
+					<a href="mailto:phuthinhnguyen1101@gmail.com" class="a8"><img src="/image/index/gmail.png" alt=""></a>
+					<a href="https://www.yelp.com/biz/rove-boba-tea-placerville" class="a9" target="_blank"><img src="/image/index/yelp.png" alt=""></a>
+					<a href="https://www.linkedin.com/in/nguyen-phu-thinh-a0a41a11b/" class="a10" target="_blank"><img src="/image/index/linkind.png" alt=""></a>
+					<a href="https://www.tiktok.com/@orinnn_207" class="a11" target="_blank"><img src="/image/index/tiktok.png" alt=""></a>
+					<a href="http://zalo.me/0937439340" class="a12" target="_blank"><img src="/image/index/zalo.png" alt=""></a>
+				</div>
+				<script>
+					let linkcontainer = document.getElementById("linkcontainer")
+					function avatarclick(){
+						linkcontainer.style.display = "block"
+					}
+					$(document).mouseup(function(e) 
+						{
+							var container = $("#linkcontainer");
+		
+							// if the target of the click isn't the container nor a descendant of the container
+							if (!container.is(e.target) && container.has(e.target).length === 0) 
+							{
+								container.fadeOut(300);
+							}
+						});
+				</script>
 			</div>
 		</div>
 		<footer>

@@ -85,113 +85,6 @@ button:hover {
   width: 100%;
   height: 100%;
 }
-.content-show .cover #linkcontainer {
-  display: none;
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  bottom: -155px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border-radius: 50%;
-  animation: linkcontaineranimation 0.8s;
-}
-@keyframes linkcontaineranimation {
-  from {
-    rotate: 8deg;
-    opacity: 0;
-  }
-  to {
-    rotate: 0;
-    opacity: 1;
-  }
-}
-.content-show .cover #linkcontainer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: white;
-  color: white;
-  padding: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.content-show .cover #linkcontainer a img {
-  width: 100%;
-  height: auto;
-}
-.content-show .cover #linkcontainer a:hover {
-  background-color: rgb(175, 175, 175);
-}
-.content-show .cover #linkcontainer .a1 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.content-show .cover #linkcontainer .a2 {
-  position: absolute;
-  top: 9%;
-  left: 64%;
-}
-.content-show .cover #linkcontainer .a3 {
-  position: absolute;
-  top: 24%;
-  left: 79%;
-}
-.content-show .cover #linkcontainer .a4 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-}
-.content-show .cover #linkcontainer .a5 {
-  position: absolute;
-  bottom: 24%;
-  left: 79%;
-}
-.content-show .cover #linkcontainer .a6 {
-  position: absolute;
-  bottom: 9%;
-  left: 64%;
-}
-.content-show .cover #linkcontainer .a7 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.content-show .cover #linkcontainer .a8 {
-  position: absolute;
-  right: 64%;
-  bottom: 9%;
-}
-.content-show .cover #linkcontainer .a9 {
-  position: absolute;
-  right: 79%;
-  bottom: 24%;
-}
-.content-show .cover #linkcontainer .a10 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-}
-.content-show .cover #linkcontainer .a11 {
-  position: absolute;
-  top: 24%;
-  right: 79%;
-}
-.content-show .cover #linkcontainer .a12 {
-  position: absolute;
-  top: 9%;
-  right: 64%;
-}
 .content-show .info {
   margin-top: 70px;
 }
@@ -205,6 +98,7 @@ button:hover {
   text-align: center;
   text-transform: uppercase;
   color: black;
+  letter-spacing: 3px;
 }
 .content-show .info .bio {
   font-size: 18px;
@@ -297,6 +191,220 @@ button:hover {
   transition: 0.6s;
   margin-left: -40px;
 }
+.content-show .seemoreaboutme-wrap {
+  margin-top: 50px;
+}
+.content-show .seemoreaboutme-wrap h1 {
+  color: black;
+  padding: 10px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 40px;
+  text-align: center;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img {
+  background-image: url("/image/index/seemoreaboutme.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button {
+  padding: 40px;
+  background-color: transparent;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 70px;
+  justify-content: center;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+@keyframes play {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  20% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0.3;
+  }
+  80% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  90% {
+    transform: scale(1.45);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div .playbutton {
+  text-decoration: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div .playbutton:first-of-type {
+  animation: play 1.2s;
+  animation-iteration-count: infinite;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div .playbutton i {
+  font-size: 135px;
+  color: black;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer {
+  display: none;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  bottom: -155px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: linkcontaineranimation 0.8s;
+}
+@keyframes linkcontaineranimation {
+  from {
+    rotate: 8deg;
+    opacity: 0;
+  }
+  to {
+    rotate: 0;
+    opacity: 1;
+  }
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  padding: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer a img {
+  width: 100%;
+  height: auto;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer a:hover {
+  background-color: rgb(175, 175, 175);
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a2 {
+  position: absolute;
+  top: 9%;
+  left: 64%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a3 {
+  position: absolute;
+  top: 24%;
+  left: 79%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a4 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a5 {
+  position: absolute;
+  bottom: 24%;
+  left: 79%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a6 {
+  position: absolute;
+  bottom: 9%;
+  left: 64%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a7 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a8 {
+  position: absolute;
+  right: 64%;
+  bottom: 9%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a9 {
+  position: absolute;
+  right: 79%;
+  bottom: 24%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a10 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a11 {
+  position: absolute;
+  top: 24%;
+  right: 79%;
+}
+.content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer .a12 {
+  position: absolute;
+  top: 9%;
+  right: 64%;
+}
 .content-show footer {
   width: 100%;
   display: flex;
@@ -342,20 +450,31 @@ button:hover {
     width: 150px;
     height: 150px;
   }
-  .content-show .cover #linkcontainer {
-    width: 280px;
-    height: 280px;
-    bottom: -140px;
-  }
-  .content-show .cover #linkcontainer a {
-    width: 40px;
-    height: 40px;
-  }
   .content-show .info .action button {
-    height: 35px;
+    height: 38px;
   }
   .content-show .info .paragraph {
     padding: 0 30px;
+  }
+  .content-show .seemoreaboutme-wrap h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+  .content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div {
+    width: 80px;
+    height: 80px;
+  }
+  .content-show .seemoreaboutme-wrap .seemoreaboutme-img .seemoreaboutme-button .overlay div .playbutton i {
+    font-size: 100px;
+  }
+  .content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer {
+    width: 280px;
+    height: 280px;
+    bottom: -83px;
+  }
+  .content-show .seemoreaboutme-wrap .seemoreaboutme-img #linkcontainer a {
+    width: 40px;
+    height: 40px;
   }
   footer {
     background-color: white;

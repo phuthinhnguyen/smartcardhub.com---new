@@ -71,132 +71,6 @@ button {
         height: 100%;
       }
     }
-
-    #linkcontainer {
-
-      @keyframes linkcontaineranimation {
-        from {
-          rotate: (8deg);
-          opacity: 0;
-        }
-
-        to {
-          rotate: 0;
-          opacity: 1;
-        }
-      }
-
-      display: none;
-      position: absolute;
-      width: 350px;
-      height: 350px;
-      bottom: -155px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      // background-color: $text-color;
-      border-radius: 50%;
-      animation: linkcontaineranimation 0.8s;
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: $button-background-hover;
-        color: white;
-        padding: 8px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        user-select: none;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-
-        &:hover {
-          background-color: rgb(175, 175, 175);
-        }
-      }
-
-      .a1 {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-
-      .a2 {
-        position: absolute;
-        top: 9%;
-        left: 64%;
-
-      }
-
-      .a3 {
-        position: absolute;
-        top: 24%;
-        left: 79%;
-      }
-
-      .a4 {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
-      }
-
-      .a5 {
-        position: absolute;
-        bottom: 24%;
-        left: 79%;
-      }
-
-      .a6 {
-        position: absolute;
-        bottom: 9%;
-        left: 64%;
-      }
-
-      .a7 {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-
-      .a8 {
-        position: absolute;
-        right: 64%;
-        bottom: 9%;
-      }
-
-      .a9 {
-        position: absolute;
-        right: 79%;
-        bottom: 24%;
-      }
-
-      .a10 {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
-      }
-
-      .a11 {
-        position: absolute;
-        top: 24%;
-        right: 79%;
-      }
-
-      .a12 {
-        position: absolute;
-        top: 9%;
-        right: 64%;
-      }
-    }
   }
 
   .info {
@@ -212,6 +86,7 @@ button {
         text-align: center;
         text-transform: uppercase;
         color: $text-color;
+        letter-spacing: 3px;
       }
     }
 
@@ -243,14 +118,14 @@ button {
         font-size: 14px;
         transition: .5s;
         color: $button-background-hover;
-
+    
         &:hover {
           background-color: $button-background-hover;
           border: 2px solid $text-color;
           color: $text-color;
           font-weight: 500;
           transition: 0.3s;
-          ;
+          
         }
       }
     }
@@ -314,6 +189,210 @@ button {
           padding: 0;
           transition: .6s;
           margin-left: -40px;
+        }
+      }
+    }
+  }
+  .seemoreaboutme-wrap{
+    margin-top: 50px;
+    h1{
+      color: $text-color;
+      padding: 10px;
+      font-weight: lighter;
+      letter-spacing: 5px;
+      font-size: 40px; 
+      text-align: center;
+    }
+    .seemoreaboutme-img{
+      background-image: url("/image/index/seemoreaboutme.jpg");
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      position: relative;
+      // opacity: 0.9;
+      .seemoreaboutme-button{
+        padding: 40px;
+        background-color: transparent;
+        text-align: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .overlay{
+          // background: rgba(5,10,52,0.7);
+          // position: absolute;
+          width: 100%;
+          height: 100%;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 70px;
+          justify-content: center;
+          div{
+              position: relative;
+              width: 110px;
+              height: 110px;
+              @keyframes play {
+                  0%{transform: scale(1);}
+                  10%{transform: scale(1.05);opacity: .9;}
+                  20%{transform: scale(1.1);opacity: .8;}
+                  30%{transform: scale(1.15);opacity: .7;}
+                  40%{transform: scale(1.2);opacity: .6;}
+                  50%{transform: scale(1.25);opacity: .5;}
+                  60%{transform: scale(1.3);opacity: .4;}
+                  70%{transform: scale(1.35);opacity: .3;}
+                  80%{transform: scale(1.4);opacity: .2;}
+                  90%{transform: scale(1.45);opacity: .1;}
+                  100%{transform: scale(1.5);opacity: 0;}
+              }
+              .playbutton{ 
+                  text-decoration: none; 
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                  background-color: white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                  &:first-of-type{
+                      animation: play 1.2s;
+                      animation-iteration-count: infinite;
+                  } 
+                  i{
+                      font-size: 135px;
+                      // color: goldenrod;
+                      color: $text-color;
+                  }
+              }
+          }
+      }
+      }
+      #linkcontainer {
+
+        @keyframes linkcontaineranimation {
+          from {
+            rotate: (8deg);
+            opacity: 0;
+          }
+  
+          to {
+            rotate: 0;
+            opacity: 1;
+          }
+        }
+  
+        display: none;
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        bottom: -155px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // background-color: $text-color;
+        border-radius: 50%;
+        animation: linkcontaineranimation 0.8s;
+  
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: $button-background-hover;
+          color: white;
+          padding: 8px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          user-select: none;
+  
+          img {
+            width: 100%;
+            height: auto;
+          }
+  
+          &:hover {
+            background-color: rgb(175, 175, 175);
+          }
+        }
+  
+        .a1 {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+  
+        .a2 {
+          position: absolute;
+          top: 9%;
+          left: 64%;
+  
+        }
+  
+        .a3 {
+          position: absolute;
+          top: 24%;
+          left: 79%;
+        }
+  
+        .a4 {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
+        }
+  
+        .a5 {
+          position: absolute;
+          bottom: 24%;
+          left: 79%;
+        }
+  
+        .a6 {
+          position: absolute;
+          bottom: 9%;
+          left: 64%;
+        }
+  
+        .a7 {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+  
+        .a8 {
+          position: absolute;
+          right: 64%;
+          bottom: 9%;
+        }
+  
+        .a9 {
+          position: absolute;
+          right: 79%;
+          bottom: 24%;
+        }
+  
+        .a10 {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+        }
+  
+        .a11 {
+          position: absolute;
+          top: 24%;
+          right: 79%;
+        }
+  
+        .a12 {
+          position: absolute;
+          top: 9%;
+          right: 64%;
         }
       }
     }
@@ -385,28 +464,48 @@ button {
         width: 150px;
         height: 150px;
       }
-
-      #linkcontainer {
-        width: 280px;
-        height: 280px;
-        bottom: -140px;
-
-        a {
-          width: 40px;
-          height: 40px;
-        }
-      }
     }
 
     .info {
       .action {
         button {
-          height: 35px;
+          height: 38px;
         }
       }
 
       .paragraph {
         padding: 0 30px;
+      }
+    }
+    .seemoreaboutme-wrap{
+      h1{
+        font-size: 30px;
+        letter-spacing: 3px;
+      }
+      .seemoreaboutme-img{
+        .seemoreaboutme-button{
+          .overlay{
+            div{
+              width: 80px;
+              height: 80px;
+              .playbutton{
+                i{
+                  font-size: 100px;
+                }
+              }
+            }
+          }
+        }
+        #linkcontainer {
+          width: 280px;
+          height: 280px;
+          bottom: -83px;
+  
+          a {
+            width: 40px;
+            height: 40px;
+          }
+        }
       }
     }
   }
